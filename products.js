@@ -222,3 +222,98 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 1000)
     }
 })
+
+/* filter functions */
+
+
+        const mobileFilterBtn = document.getElementById("mobileFilterBtn")
+        const filterSidebar = document.getElementById("filterSidebar")
+        const closeFilter = document.getElementById("closeFilter")
+
+        mobileFilterBtn.addEventListener("click", () => {
+            filterSidebar.classList.add("active")
+        })
+
+        closeFilter.addEventListener("click", () => {
+            filterSidebar.classList.remove("active")
+        })
+
+        // ================= FILTER PRODUCTS =================
+
+        const categoryFilters = document.querySelectorAll(".category-filter")
+        const brandFilters = document.querySelectorAll(".brand-filter")
+        const ratingFilters = document.querySelectorAll(".rating-filter")
+        const priceRange = document.getElementById("priceRange")
+        const priceValue = document.getElementById("priceValue")
+
+        const products = document.querySelectorAll(".product-card")
+
+        function filterProducts(){
+
+            const selectedCategories = [...categoryFilters]
+                .filter(item => item.checked)
+                .map(item => item.value)
+
+            const selectedBrands = [...brandFilters]
+                .filter(item => item.checked)
+                .map(item => item.value)
+
+            const selectedRating =
+                document.querySelector(".rating-filter:checked")?.value || 0
+
+            const maxPrice = parseInt(priceRange.value)
+
+            priceValue.textContent = maxPrice
+
+            products.forEach(product => {
+
+                const category = product.dataset.category
+                const brand = product.dataset.brand
+                const price = parseInt(product.dataset.price)
+                const rating = parseInt(product.dataset.rating)
+
+                const categoryMatch =
+                    selectedCategories.length === 0 ||
+                    selectedCategories.includes(category)
+
+                const brandMatch =
+                    selectedBrands.length === 0 ||
+                    selectedBrands.includes(brand)
+
+                const ratingMatch =
+                    rating >= selectedRating
+
+                const priceMatch =
+                    price <= maxPrice
+
+                if(
+                    categoryMatch &&
+                    brandMatch &&
+                    ratingMatch &&
+                    priceMatch
+                ){
+                    product.style.display = "block"
+                }
+                else{
+                    product.style.display = "none"
+                }
+
+            })
+
+        }
+
+        categoryFilters.forEach(filter => {
+            filter.addEventListener("change", filterProducts)
+        })
+
+        brandFilters.forEach(filter => {
+            filter.addEventListener("change", filterProducts)
+        })
+
+        ratingFilters.forEach(filter => {
+            filter.addEventListener("change", filterProducts)
+        })
+
+        priceRange.addEventListener("input", filterProducts)
+
+        filterProducts()

@@ -81,7 +81,7 @@ window.addEventListener("resize", () => {
 // Hero section
 
 let hero = document.querySelector(".hero")
-let image = ["./src/home.webp", "./src/home1.png"]
+let image = ["./src/home.webp", "src/home1.webp"]
 let clslist = document.querySelectorAll(".hero-content")
 let index = 0
 
