@@ -242,11 +242,12 @@
 
 .password-field{
     position: relative;
+    width: 100%;
 }
 
-.password-field input{
+/* .password-field input{
     padding-right: 55px;
-}
+} */
 
 .toggle-password{
     position: absolute;

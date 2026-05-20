@@ -219,8 +219,8 @@
 
     border:none;
 
-    background:#111;
-    color:white;
+    background: linear-gradient(135deg, #0F1C2E, #1C2E44);
+    color: #C9A84C;
 
     font-size:15px;
     font-weight:600;

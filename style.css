@@ -2,7 +2,7 @@
    ULTRA PREMIUM LUXURY COLOR PALETTE
 ========================================= */
 
-:root{
+:root {
 
     /* ===== PRIMARY COLORS ===== */
 
@@ -49,74 +49,67 @@
 
     /* ===== SHADOWS ===== */
 
-    --shadow-soft: 0 8px 24px rgba(15,20,32,0.08);
-    --shadow-medium: 0 12px 32px rgba(15,20,32,0.14);
-    --shadow-gold: 0 10px 28px rgba(212,175,55,0.25);
+    --shadow-soft: 0 8px 24px rgba(15, 20, 32, 0.08);
+    --shadow-medium: 0 12px 32px rgba(15, 20, 32, 0.14);
+    --shadow-gold: 0 10px 28px rgba(212, 175, 55, 0.25);
 
     /* ===== PREMIUM GRADIENTS ===== */
 
     --gradient-gold:
-    linear-gradient(
-        135deg,
-        #D4AF37,
-        #F6E7B2,
-        #B8912E
-    );
+        linear-gradient(135deg,
+            #D4AF37,
+            #F6E7B2,
+            #B8912E);
 
     --gradient-dark:
-    linear-gradient(
-        135deg,
-        #08111C,
-        #162435,
-        #22344B
-    );
+        linear-gradient(135deg,
+            #08111C,
+            #162435,
+            #22344B);
 
     --gradient-premium:
-    linear-gradient(
-        135deg,
-        #0B1420,
-        #162435,
-        #D4AF37
-    );
+        linear-gradient(135deg,
+            #0B1420,
+            #162435,
+            #D4AF37);
 
     --gradient-luxury:
-    linear-gradient(
-        135deg,
-        #0F172A 0%,
-        #1E293B 45%,
-        #D4AF37 100%
-    );
+        linear-gradient(135deg,
+            #0F172A 0%,
+            #1E293B 45%,
+            #D4AF37 100%);
 
     /* ===== GLASS EFFECT ===== */
 
-    --glass-bg: rgba(255,255,255,0.08);
-    --glass-border: rgba(255,255,255,0.12);
+    --glass-bg: rgba(255, 255, 255, 0.08);
+    --glass-border: rgba(255, 255, 255, 0.12);
 }
 
-body{
+body {
     background: var(--bg-light);
     color: var(--text-dark);
 }
 
-header{
+header {
     background: var(--gradient-dark);
     border-bottom: 1px solid var(--border-light);
 }
 
-button{
+button {
     background: var(--gradient-gold);
     color: var(--navy);
     box-shadow: var(--shadow-gold);
 }
 
-.product-card{
+.product-card {
     background: white;
     box-shadow: var(--shadow-soft);
 }
 
-.product-card:hover{
+.product-card:hover {
     box-shadow: var(--shadow-medium);
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -1037,9 +1030,9 @@ footer {
 }
 
 .app-buttons img {
-    width:120px;          
-    height: 42px;          
-    object-fit: cover;     
+    width: 120px;
+    height: 42px;
+    object-fit: cover;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
     filter: grayscale(20%) brightness(0.9);
@@ -1342,23 +1335,24 @@ footer {
 
 /* ================= POPULAR PRODUCTS ================= */
 
-    /* Styling for the active tab state */
-    .filter-btn.active {
-        background-color: #000;
-        color: #fff;
-    }
-    
-    /* Smooth transition logic for card filtering */
-    .filter-card{
-        display: block;
-        opacity: 1;
-        transition: opacity 0.3s ease-in-out;
-    }
-    
-    .filter-card.hidden {
-        display: none;
-        opacity: 0;
-    }
+/* Styling for the active tab state */
+.filter-btn.active {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Smooth transition logic for card filtering */
+.filter-card {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.filter-card.hidden {
+    display: none;
+    opacity: 0;
+}
+
 .popular-products {
     width: 100%;
     padding: 40px 4%;
@@ -1644,7 +1638,7 @@ footer {
     padding: 13px;
     border: 1px solid #0F1C2E;
     border-radius: 6px;
-    background: #0F1C2E;
+    background: linear-gradient(135deg, #0F1C2E, #1C2E44);
     color: #D4C49A;
     font-size: 13px;
     font-weight: 600;
@@ -1691,27 +1685,32 @@ footer {
 @media (max-width: 768px) {
     .products-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 15px; /* Shrunk down layout gap */
+        gap: 15px;
+        /* Shrunk down layout gap */
     }
 }
 
 /* Perfect fit for small mobile devices (320px - 480px) */
 @media (max-width: 480px) {
     .products-container {
-        padding: 10px; /* Prevents card edges from clipping the screen */
+        padding: 10px;
+        /* Prevents card edges from clipping the screen */
     }
 
     .products-grid {
-        grid-template-columns: 1fr; /* Forces a beautifully centered 1-column layout */
+        grid-template-columns: 1fr;
+        /* Forces a beautifully centered 1-column layout */
         gap: 20px;
     }
 
     .product-card {
-        border-radius: 8px; /* Slightly tighter corners look better on mobile */
+        border-radius: 8px;
+        /* Slightly tighter corners look better on mobile */
     }
 
     .product-image {
-        height: 210px; /* Reduced image height to save valuable vertical screen space */
+        height: 210px;
+        /* Reduced image height to save valuable vertical screen space */
     }
 
     /* Make action buttons permanently visible on tap targets instead of hidden on hover */
@@ -1729,7 +1728,8 @@ footer {
     }
 
     .product-info {
-        padding: 15px; /* Compact padding */
+        padding: 15px;
+        /* Compact padding */
     }
 
     .product-name {
@@ -2771,48 +2771,48 @@ footer {
 }
 
 /* ================= NEWSLETTER ================= */
-  .newsletter {
+.newsletter {
     max-width: 700px;
     margin: 0 auto;
     padding: 64px 24px;
     text-align: center;
-  }
+}
 
-  .newsletter-title {
+.newsletter-title {
     font-family: 'Georgia', serif;
     font-size: 32px;
     font-weight: 400;
     letter-spacing: 0.06em;
     color: #0F1C2E;
     margin-bottom: 12px;
-  }
+}
 
-  .newsletter-desc {
+.newsletter-desc {
     font-size: 14px;
     color: #7A6E65;
     margin-bottom: 28px;
     line-height: 1.6;
-  }
+}
 
-  /* ── FIX: wrap form + checkbox together ── */
-  .newsletter-form {
+/* ── FIX: wrap form + checkbox together ── */
+.newsletter-form {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     gap: 0;
     width: 100%;
     margin-bottom: 12px;
-  }
+}
 
-  .input-group {
+.input-groupfooter {
     flex: 1;
     min-width: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-  }
+}
 
-  .newsletter-form input[type="email"] {
+.newsletter-form input[type="email"] {
     width: 100%;
     padding: 15px 18px;
     font-size: 14px;
@@ -2822,20 +2822,20 @@ footer {
     outline: none;
     background: #fff;
     transition: border-color 0.3s, box-shadow 0.3s;
-  }
+}
 
-  .newsletter-form input[type="email"]:focus {
+.newsletter-form input[type="email"]:focus {
     border-color: #C9A84C;
-    box-shadow: 0 0 0 3px rgba(201,168,76,0.12);
-  }
+    box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.12);
+}
 
-  /* ── ERROR STATE ── */
-  .newsletter-form input[type="email"].error {
+/* ── ERROR STATE ── */
+.newsletter-form input[type="email"].error {
     border-color: #C0392B;
-    box-shadow: 0 0 0 3px rgba(192,57,43,0.1);
-  }
+    box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.1);
+}
 
-  .error-message {
+.error-message {
     display: block;
     margin-top: 5px;
     padding-left: 2px;
@@ -2843,9 +2843,9 @@ footer {
     color: #C0392B;
     font-weight: 500;
     text-align: left;
-  }
+}
 
-  .newsletter-form button {
+.newsletter-form button {
     padding: 15px 30px;
     font-size: 12px;
     font-weight: 600;
@@ -2856,20 +2856,21 @@ footer {
     cursor: pointer;
     text-transform: uppercase;
     white-space: nowrap;
-    align-self: flex-start; /* aligns with top of input */
+    align-self: flex-start;
+    /* aligns with top of input */
     transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.3s;
-  }
+}
 
-  .newsletter-form button:hover {
+.newsletter-form button:hover {
     background: #C9A84C;
     color: #0F1C2E;
     border-color: #C9A84C;
     transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(201,168,76,0.35);
-  }
+    box-shadow: 0 6px 18px rgba(201, 168, 76, 0.35);
+}
 
-  /* ── CHECKBOX (now INSIDE form) ── */
-  .newsletter-checkbox {
+/* ── CHECKBOX (now INSIDE form) ── */
+.newsletter-checkbox {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -2879,31 +2880,31 @@ footer {
     color: #7A6E65;
     margin-top: 4px;
     position: relative;
-  }
+}
 
-  .newsletter-checkbox input[type="checkbox"] {
+.newsletter-checkbox input[type="checkbox"] {
     width: 16px;
     height: 16px;
     accent-color: #C9A84C;
     cursor: pointer;
     flex-shrink: 0;
     margin: 0;
-  }
+}
 
-  /* ── CHECKBOX ERROR STATE ── */
-  .newsletter-checkbox input[type="checkbox"].checkbox-error {
+/* ── CHECKBOX ERROR STATE ── */
+.newsletter-checkbox input[type="checkbox"].checkbox-error {
     outline: 2px solid #C0392B;
     outline-offset: 2px;
-  }
+}
 
-  .newsletter-checkbox label {
+.newsletter-checkbox label {
     cursor: pointer;
     line-height: 1.4;
     text-align: left;
     transition: color 0.3s;
-  }
+}
 
-  .checkbox-error-msg {
+.checkbox-error-msg {
     display: block;
     flex: 1 1 100%;
     width: 100%;
@@ -2912,21 +2913,25 @@ footer {
     color: #C0392B;
     font-weight: 500;
     text-align: center;
-  }
+}
 
-  .newsletter-checkbox label:hover { color: #0F1C2E; }
+.newsletter-checkbox label:hover {
+    color: #0F1C2E;
+}
 
-  .newsletter-checkbox a {
+.newsletter-checkbox a {
     color: #C9A84C;
     text-decoration: underline;
     transition: color 0.3s;
-  }
+}
 
-  .newsletter-checkbox a:hover { color: #A8862F; }
+.newsletter-checkbox a:hover {
+    color: #A8862F;
+}
 
-  /* checkbox error message sits below the checkbox row */
-  /* ── SUCCESS STATE ── */
-  .success-message {
+/* checkbox error message sits below the checkbox row */
+/* ── SUCCESS STATE ── */
+.success-message {
     display: block;
     margin-top: 12px;
     font-size: 13px;
@@ -2936,13 +2941,39 @@ footer {
     border: 1px solid #A5D6A7;
     padding: 10px 16px;
     border-radius: 4px;
-  }
+}
 
-  @media (max-width: 480px) {
-    .newsletter { padding: 40px 16px; }
-    .newsletter-title { font-size: 22px; }
-    .newsletter-form { flex-direction: column; gap: 10px; }
-    .newsletter-form input[type="email"] { border-right: 1px solid #DDD5C4; width: 100%; }
-    .newsletter-form button { width: 100%; padding: 14px; }
-    .newsletter-checkbox { align-items: flex-start; text-align: left; }
-  }
+@media (max-width: 480px) {
+    .newsletter {
+        padding: 40px 16px;
+    }
+
+    .newsletter-title {
+        font-size: 22px;
+    }
+
+    .input-groupfooter {
+        width: 100%;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .newsletter-form input[type="email"] {
+        border-right: 1px solid #DDD5C4;
+        width: 100%;
+    }
+
+    .newsletter-form button {
+        width: 100%;
+        padding: 14px;
+    }
+
+    .newsletter-checkbox {
+        align-items: flex-start;
+        text-align: left;
+    }
+}
