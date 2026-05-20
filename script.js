@@ -76,7 +76,7 @@ window.addEventListener("resize", () => {
 
 })
 
-
+/* 
 
 // Hero section
 
@@ -137,7 +137,7 @@ arrow2.addEventListener("click", () => {
 
 })
 
-
+ */
 
 
 
@@ -244,7 +244,7 @@ function showCheckboxError(message) {
     });
 
 
-    /* deal of the week */
+    /* deal of the week *//* 
     document.addEventListener("DOMContentLoaded", () => {
     // 1. Set the target countdown date (e.g., 7 days from now)
     // You can also set a fixed date like: new Date("Dec 31, 2026 23:59:59").getTime();
@@ -285,4 +285,4 @@ function showCheckboxError(message) {
             // document.querySelector(".deal-text").innerHTML = "❌ This deal has expired!";
         }
     }, 1000);
-});
+}); */
