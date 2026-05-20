@@ -2523,7 +2523,7 @@ footer {
     }
 
     .client-image {
-        width: 40px;
+        width: 40px;    
         height: 40px;
         margin-bottom: 6px;
     }
@@ -2976,4 +2976,60 @@ footer {
         align-items: flex-start;
         text-align: left;
     }
+}
+
+/* ================= FOOTER LOGO ================= */
+
+.footer-logo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:auto ;
+    object-fit: cover;
+}
+
+.footer-logo a{
+    display:inline-block;
+}
+
+.footer-logo img{
+    max-width:100%;
+    height:auto;
+    object-fit:cover;
+    display:block;
+    margin: 10px;
+}
+
+/* ================= TABLET ================= */
+
+@media screen and (max-width:768px){
+
+    .footer-logo img{
+        width:250px;
+    }
+
+}
+
+/* ================= MOBILE ================= */
+
+@media screen and (max-width:480px){
+
+    .footer-logo{
+        padding:5px 0;
+    }
+
+    .footer-logo img{
+        width:200px;
+    }
+
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media screen and (max-width:320px){
+
+    .footer-logo img{
+        width:150px;
+    }
+
 }
