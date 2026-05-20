@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashion Website</title>
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./login.css">    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="promo-text">
+            FREE SHIPPING WORLD WIDE FOR ALL ORDERS OVER $199
+            <a href="#" class="shop-now">SHOP NOW</a>
+        </div>
+
+        <div class="utility-links">
+            <a href="#">ORDER TRACKING</a>
+            <span class="divider">|</span>
+            <a href="#">HELP CENTER</a>
+            <span class="divider">|</span>
+            <div class="dropdown">
+                ENGLISH
+            </div>
+            <span class="divider">|</span>
+            <div class="dropdown">
+                $ USD
+            </div>
+        </div>
+    </div>
+    <!-- ================= HEADER ================= -->
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo"><img src="./src/logo.webp" alt="compppany logo"></div>
+
+
+
+
+            <!--  search bar  -->
+
+            <div class="right-nav">
+
+                <ul class="nav-links" id="navLinks">
+
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="./products.html">PRODUCTS<span class="badge hot">HOT</span></a></li>
+                    <li><a href="./blog.html">BLOG<span class="badge">SALE</span></a></li>
+                    <li><a href=".about.html">ABOUT US</a></li>
+                    <li><a href="./contact.html">CONTACT</a></li>
+
+
+
+                </ul>
+
+                <div class="container2">
+        
+
+                    <div class="icons">
+
+                        <div class="wishlist">
+                            <div>
+                                <i class="fa-regular fa-heart"></i>
+                                <span class="count">0</span>
+                            </div>
+                            <h3>Whishlist</h3>
+                        </div>
+
+                        <div class="card">
+                            <div>
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <span class="count">0</span>
+                            </div>
+                            <h3>Add to Card</h3>
+                        </div>
+
+                    <a href="./login.html">
+                        <div class="login-btn">
+                            <i class="fa-regular fa-user"></i>
+                                <h3>Login</h3>
+                            </div>
+                        </a>
+
+
+                    </div>
+                </div>
+
+                <div class="menu-btn" id="menuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <div class="close-btn" id="closeBtn">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+
+
+
+
+            </div>
+
+            <div class="menu-btn2" id="menuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="close-btn2" id="closeBtn">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+
+
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= Login container ================= -->
+    <section class="login">
+
+        <section class="login-header">
+
+        <h1>Login in your account</h1>
+
+        <div class="breadcrumb">
+            <a href="./index.html">Home</a>
+            <span>/</span>
+
+            <a href="./products.html">Products</a>
+            <span>/</span>
+        </div>
+
+    </section>
+        <div class="card-container">
+
+
+
+            <form class="auth-form">
+                <div class="input-group">
+                    <label>Email Address</label>
+
+                    <input type="email" id="emailAddress" placeholder="Enter your email" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Role</label>
+                    <select name="role" id="role" required>
+                        <option value="" selected disabled>Select Role</option>
+                        <option value="User">User</option>
+                        <option value="Admin">Admin</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+
+                    <div class="password-field">
+
+                        <input type="password" id="password" placeholder="Enter your password" required
+                            autocomplete="off">
+
+                        <button type="button" class="toggle-password" id="togglePassword">
+                            show
+                        </button>
+
+                    </div>
+                </div>
+                <div class="action-row remember-row">
+
+                    <label class="remember-me">
+                        <input type="checkbox" id="rememberMe">
+                        <span>Remember Me</span>
+                    </label>
+
+                    <a href="./404.html">Forgot Password?</a>
+
+                </div>
+
+
+                <button type="submit" class="main-btn">LOG IN</button>
+
+                <div class="social-divider">or continue with</div>
+
+                <div class="social-row">
+                    <a href="./404.html">
+                        <button type="button" class="social-btn google"><i class="fab fa-google"></i></button>
+                    </a>
+                    <a href="./404.html">
+                        <button type="button" class="social-btn facebook"><i class="fab fa-facebook-f"></i></button>
+                    </a>
+                    <a href="./404.html">
+                        <button type="button" class="social-btn apple"><i class="fab fa-apple"></i></button>
+                    </a>
+                </div>
+
+                <div class="footer-note">
+                    Don’t have an account? <a href="./signin.html">Sign Up</a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+
+    <section class="newsletter">
+        <h2 class="newsletter-title">Subscribe To Our Newsletter</h2>
+        <p class="newsletter-desc">Subscribe to our latest newsletter to get news about special discounts.</p>
+
+        <div class="newsletter-form">
+            <input type="email" placeholder="Your email address" aria-label="Your email address" />
+            <button type="button">Subscribe</button>
+        </div>
+
+        <div class="newsletter-checkbox">
+            <input type="checkbox" id="agree" />
+            <label for="agree">
+                I agree to the <a href="#">terms and conditions</a> and the <a href="#">privacy policy</a>
+            </label>
+        </div>
+    </section>
+    <!-- ================= FOOTER SECTION ================= -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <!-- COLUMN 1 -->
+
+            <div class="footer-col">
+
+                <h3>FASHIUP</h3>
+
+                <p>
+                    Welcome to our store, where we pride ourselves on
+                    providing exceptional products and unparalleled customer service.
+                    Our store is a haven for those who appreciate quality,
+                    style, and innovation.
+                </p>
+
+                <div class="app-buttons">
+
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg">
+
+                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg">
+
+                </div>
+
+            </div>
+
+            <!-- COLUMN 2 -->
+
+            <div class="footer-col">
+
+                <h2>Our Company</h2>
+
+                <div class="footer-links">
+                    <a href="#">Delivery</a>
+                    <a href="#">Legal Notice</a>
+                    <a href="#">Terms and Conditions</a>
+                    <a href="#">Secure Payment</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">About Us</a>
+                </div>
+
+            </div>
+
+            <!-- COLUMN 3 -->
+
+            <div class="footer-col">
+
+                <h2>Products</h2>
+
+                <div class="footer-links">
+                    <a href="#">Prices Drop</a>
+                    <a href="#">New Products</a>
+                    <a href="#">Best Sellers</a>
+                    <a href="#">Sitemap</a>
+                    <a href="#">Stores</a>
+                    <a href="#">Accessories</a>
+                </div>
+
+            </div>
+
+            <!-- COLUMN 4 -->
+
+            <div class="footer-col">
+
+                <h2>Store Information</h2>
+
+                <p>
+                    Fashiup - Fashion Store <br>
+                    99 New Theme St. XY, USA 12345, <br>
+                    Beside the Sun point land. <br>
+                    United States
+                </p>
+
+                <p>Call us: +00 123-456-789</p>
+
+                <p>Email us: admin@example.com</p>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <!-- ================= FOOTER BOTTOM ================= -->
+
+        <div class="footer-bottom">
+
+            <!-- SOCIAL -->
+
+            <div class="social-icons">
+
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+                <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+
+                <a href="#"><i class="fa-brands fa-google"></i></a>
+
+            </div>
+
+            <!-- COPYRIGHT -->
+
+            <div class="copyright">
+                Copyright © Fashiup. All Rights Reserved
+            </div>
+
+            <!-- PAYMENT -->
+
+            <div class="payment">
+
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg">
+
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/MasterCard_Logo.svg">
+
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Paypal_2014_logo.png">
+
+            </div>
+
+            <!-- TOP BUTTON -->
+
+            <div class="top-btn" id="topBtn">
+                <i class="fa-solid fa-angle-up"></i>
+            </div>
+
+        </div>
+
+    </footer>
+    <script src="./login.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

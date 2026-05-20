@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashion Website</title>
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="promo-text">
+            FREE SHIPPING WORLD WIDE FOR ALL ORDERS OVER $199
+            <a href="./products.html" class="shop-now">SHOP NOW</a>
+        </div>
+
+        <div class="utility-links">
+            <a href="./404.html">ORDER TRACKING</a>
+            <span class="divider">|</span>
+            <a href="./404.html">HELP CENTER</a>
+            <span class="divider">|</span>
+            <div class="dropdown">
+                ENGLISH
+            </div>
+            <span class="divider">|</span>
+            <div class="dropdown">
+                $ USD
+            </div>
+        </div>
+    </div>
+    <!-- ================= HEADER ================= -->
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo"><img src="./src/logo.webp" alt="compppany logo"></div>
+
+
+
+
+            <!--  search bar  -->
+
+            <div class="right-nav">
+
+                <ul class="nav-links" id="navLinks">
+
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="./products.html">PRODUCTS<span class="badge hot">HOT</span></a></li>
+                    <li><a href="./blog.html">BLOG<span class="badge">SALE</span></a></li>
+                    <li><a href="./about.html">ABOUT US</a></li>
+                    <li><a href="./contact.html">CONTACT</a></li>
+
+                </ul>
+
+                <div class="container2">
+
+
+                    <div class="icons">
+
+                        <div class="wishlist">
+                            <div>
+                                <i class="fa-regular fa-heart"></i>
+                                <span class="count">0</span>
+                            </div>
+                            <h3>Whishlist</h3>
+                        </div>
+
+                        <div class="card">
+                            <div>
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <span class="count">0</span>
+                            </div>
+                            <h3>Add to Card</h3>
+                        </div>
+
+
+                        <a href="./login.html">
+                        <div class="login-btn">
+                            <i class="fa-regular fa-user"></i>
+                                <h3>Login</h3>
+                            </div>
+                        </a>
+
+
+                    </div>
+                </div>
+
+                <div class="menu-btn" id="menuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <div class="close-btn" id="closeBtn">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+
+
+
+
+            </div>
+
+            <div class="menu-btn2" id="menuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="close-btn2" id="closeBtn">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+
+
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero">
+
+        <button class="side-arrow arr1"><span class="material-symbols-outlined">arrow_back_ios</span></button>
+
+        <div class="hero-content active">
+            <p>AMAZING DEALS ONLY!</p>
+            <h1>
+                Latest Stylish <br>
+                Women’s Clothes <br>
+                Collection
+            </h1>
+            <button>SHOP NOW</button>
+        </div>
+
+        <div class="hero-content">
+            <p>NEW STYLISH COLLECTIONS</p>
+            <h1>
+                Regular fit <br>
+                Full Sleeve Men's <br>
+                Jackets
+            </h1>
+            <a href="./products.html">
+                <button>SHOP NOW</button>
+            </a>
+        </div>
+
+        <button class="side-arrow arr2"><span class="material-symbols-outlined">arrow_forward_ios</span></button>
+    </section>
+
+    <section class="catlog">
+        <div class="first-catlog-card">
+            <p>Brands Summer Sale</p>
+            <div class="catlog-title-container">
+                <p>Best Stylish</p>
+                <p>Women Clothes</p>
+                <p>Collection</p>
+            </div>
+            <a href="./shop.html"><button>Shop Now</button></a>
+        </div>
+        <div class="catlog-card backpack">
+            <div class="catlog-title-container">
+                <p>Casual Backpack</p>
+            </div>
+            <a href="./shop.html">Shop Now</a>
+        </div>
+        <div class="catlog-card top">
+            <div class="catlog-title-container">
+                <p>Floral Printed Regular Top</p>
+            </div>
+            <a href="./shop.html">Shop Now</a>
+        </div>
+
+    </section>
+   <section class="popular-products ">
+    <div class="title">
+        <p>Popular Products</p>
+        <div class="buttons">
+            <button class="filter-btn active" data-category="new-arrival">NEW ARRIVAL</button>
+            <button class="filter-btn" data-category="premium">PREMIUM</button>
+            <button class="filter-btn" data-category="best-selling">BEST SELLING</button>
+        </div>
+    </div>
+
+    <div class="products-container">
+        <div class="products-grid">
+
+            <div class="product-card filter-card" data-category="new-arrival">
+                <div class="product-image">
+                    <img src="./src/shirts/compressed-10.webp" alt="Product">
+                    <div class="product-labels">
+                        <span class="product-label">New</span>
+                        <span class="product-badge">Hot</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="action-btn like-btn"><i class="fa-regular fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-eye"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-share"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Premium Oversized T-Shirt</h3>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        </div>
+                        <span class="rating-count">(120 Reviews)</span>
+                    </div>
+                    <div class="product-price">$49 <span class="price-original">$79</span></div>
+                    <span class="discount-badge">38% OFF</span>
+                    <p class="product-desc">Stylish premium cotton oversized t-shirt with modern fit and soft fabric.</p>
+                    <a href="./login.html">
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="product-card filter-card" data-category="premium">
+                <div class="product-image">
+                    <img src="./src/shoes/compressed-12.webp" alt="Shoes">
+                    <div class="product-labels"><span class="product-label">Sale</span></div>
+                    <div class="product-actions">
+                        <button class="action-btn like-btn liked"><i class="fa-solid fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-eye"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-share"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Running Sports Sneakers</h3>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="rating-count">(340 Reviews)</span>
+                    </div>
+                    <div class="product-price">$99 <span class="price-original">$140</span></div>
+                    <span class="discount-badge">29% OFF</span>
+                    <p class="product-desc">Lightweight running shoes designed for comfort and performance.</p>
+                    <a href="./login.html">
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="product-card filter-card" data-category="best-selling">
+                <div class="product-image">
+                    <img src="./src/watchs/compressed-7.webp" alt="Watch">
+                    <div class="product-labels"><span class="product-label">Trending</span></div>
+                    <div class="product-actions">
+                        <button class="action-btn like-btn"><i class="fa-regular fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-eye"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-share"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Luxury Watch</h3>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        </div>
+                        <span class="rating-count">(89 Reviews)</span>
+                    </div>
+                    <div class="product-price">$199 <span class="price-original">$250</span></div>
+                    <span class="discount-badge">20% OFF</span>
+                    <p class="product-desc">Premium analog watch and elegant design.</p>
+                    <a href="./login.html">
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="product-card filter-card" data-category="new-arrival">
+                <div class="product-image">
+                    <img src="./src/shirts/compressed-9.webp" alt="Product">
+                    <div class="product-labels">
+                        <span class="product-label">New</span>
+                        <span class="product-badge">Hot</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="action-btn like-btn"><i class="fa-regular fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-eye"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-share"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Premium Oversized T-Shirt</h3>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        </div>
+                        <span class="rating-count">(120 Reviews)</span>
+                    </div>
+                    <div class="product-price">$49 <span class="price-original">$79</span></div>
+                    <span class="discount-badge">38% OFF</span>
+                    <p class="product-desc">Stylish premium cotton oversized t-shirt with modern fit and soft fabric.</p>
+                    <a href="./login.html">
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="product-card filter-card" data-category="premium">
+                <div class="product-image">
+                    <img src="./src/watchs/compressed-8.webp" alt="Watch">
+                    <div class="product-labels"><span class="product-label">Trending</span></div>
+                    <div class="product-actions">
+                        <button class="action-btn like-btn"><i class="fa-regular fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-eye"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-share"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Luxury Watch</h3>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        </div>
+                        <span class="rating-count">(89 Reviews)</span>
+                    </div>
+                    <div class="product-price">$199 <span class="price-original">$250</span></div>
+                    <span class="discount-badge">20% OFF</span>
+                    <p class="product-desc">Premium Premium analog watch and elegant design.</p>
+                    <a href="./login.html">
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="product-card filter-card" data-category="best-selling">
+                <div class="product-image">
+                    <img src="./src/shoes/compressed-13.webp" alt="Watch">
+                    <div class="product-labels"><span class="product-label">Trending</span></div>
+                    <div class="product-actions">
+                        <button class="action-btn like-btn"><i class="fa-regular fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-eye"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-share"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Trendy Footwear</h3>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        </div>
+                        <span class="rating-count">(89 Reviews)</span>
+                    </div>
+                    <div class="product-price">$199 <span class="price-original">$250</span></div>
+                    <span class="discount-badge">20% OFF</span>
+                    <p class="product-desc">Step into comfort and style with our trendy girls slippers collection.</p>
+                    <a href="./login.html">
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="product-card filter-card" data-category="best-selling">
+                <div class="product-image">
+                    <img src="./src/shoes/compressed-14.webp" alt="Watch">
+                    <div class="product-labels"><span class="product-label">Trending</span></div>
+                    <div class="product-actions">
+                        <button class="action-btn like-btn"><i class="fa-regular fa-heart"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-eye"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-share"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Leather Shoe</h3>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        </div>
+                        <span class="rating-count">(89 Reviews)</span>
+                    </div>
+                    <div class="product-price">$199 <span class="price-original">$250</span></div>
+                    <span class="discount-badge">20% OFF</span>
+                    <p class="product-desc">Discover premium leather shoes crafted for comfort, durability, and timeless style.</p>
+                    <a href="./login.html">
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </a>
+                </div>
+            </div>
+              <div class="product-card filter-card" data-category="premium">
+
+                    <div class="product-image">
+                        <img src="./src/pants/compressed-17.webp" alt="Product">
+
+                        <div class="product-labels">
+                            <span class="product-label">New</span>
+                            <span class="product-badge">Hot</span>
+                        </div>
+
+                        <div class="product-actions">
+                            <button class="action-btn like-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button class="action-btn">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button class="action-btn">
+                                <i class="fa-solid fa-share"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3 class="product-name">
+                            Stylish Pants
+                        </h3>
+
+                        <div class="product-rating">
+
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+
+                            <span class="rating-count">(120 Reviews)</span>
+
+                        </div>
+
+                        <div class="product-price">
+                            $49
+                            <span class="price-original">$79</span>
+                        </div>
+
+                        <span class="discount-badge">38% OFF</span>
+
+                        <p class="product-desc">
+                             Discover comfortable and trendy pants perfect for every occasion.
+                        </p>
+
+                        <a href="./login.html">
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-card filter-card" data-category="best-selling">
+
+                    <div class="product-image">
+                        <img src="./src/shoes/compressed-15.webp" alt="Shoes">
+
+                        <div class="product-labels">
+                            <span class="product-label">Sale</span>
+                        </div>
+
+                        <div class="product-actions">
+                            <button class="action-btn like-btn liked">
+                                <i class="fa-solid fa-heart"></i>
+                            </button>
+
+                            <button class="action-btn">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button class="action-btn">
+                                <i class="fa-solid fa-share"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3 class="product-name">
+                            Office shoe
+                        </h3>
+
+                        <div class="product-rating">
+
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+
+                            <span class="rating-count">(340 Reviews)</span>
+
+                        </div>
+
+                        <div class="product-price">
+                            $99
+                            <span class="price-original">$140</span>
+                        </div>
+
+                        <span class="discount-badge">29% OFF</span>
+
+                        <p class="product-desc">
+                            Professional and comfortable office shoes designed for everyday elegance.
+                        </p>
+
+                        <a href="./login.html">
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="product-card filter-card" data-category="new-arrival">
+
+                    <div class="product-image">
+                        <img src="./src/shirts/compressed-11.webp" alt="Watch">
+
+                        <div class="product-labels">
+                            <span class="product-label">Trending</span>
+                        </div>
+
+                        <div class="product-actions">
+                            <button class="action-btn like-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button class="action-btn">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button class="action-btn">
+                                <i class="fa-solid fa-share"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3 class="product-name">
+                            Premium Oversized T-Shirt
+                        </h3>
+
+                        <div class="product-rating">
+
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+
+                            <span class="rating-count">(89 Reviews)</span>
+
+                        </div>
+
+                        <div class="product-price">
+                            $199
+                            <span class="price-original">$250</span>
+                        </div>
+
+                        <span class="discount-badge">20% OFF</span>
+
+                        <p class="product-desc">
+                            Stylish premium cotton oversized t-shirt with modern fit and soft fabric.
+                        </p>
+
+                        <a href="./login.html">
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </a>
+
+                    </div>
+
+                </div>
+                <div class="product-card filter-card" data-category="new-arrival">
+
+                    <div class="product-image">
+                        <img src="./src/handbags/compressed-6.webp" alt="Watch">
+
+                        <div class="product-labels">
+                            <span class="product-label">Trending</span>
+                        </div>
+
+                        <div class="product-actions">
+                            <button class="action-btn like-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button class="action-btn">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button class="action-btn">
+                                <i class="fa-solid fa-share"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3 class="product-name">
+                            Stylish Hand Bag
+                        </h3>
+
+                        <div class="product-rating">
+
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+
+                            <span class="rating-count">(89 Reviews)</span>
+
+                        </div>
+
+                        <div class="product-price">
+                            $199
+                            <span class="price-original">$250</span>
+                        </div>
+
+                        <span class="discount-badge">20% OFF</span>
+
+                        <p class="product-desc">
+                            Elegant handbags designed for fashion, comfort, and daily use.
+                        </p>
+
+                        <a href="./login.html">
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </a>
+
+                    </div>
+
+                </div>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</section>
+    <!-- Quick shop -->
+    <section class="quick-shop">
+        <div class="quick-card handbag">
+            <div class="quick-title">
+                <p>Fashionable Handbag</p>
+            </div>
+            <a href="./shop.html">Shop Now</a>
+        </div>
+        <div class="quick-card watch">
+            <div class="quick-title">
+                <p>Emerald Gold Watch</p>
+            </div>
+            <a href="./shop.html">Shop Now</a>
+        </div>
+        <div class="quick-card sunglass">
+            <div class="quick-title">
+                <p>Women Sunglasses</p>
+            </div>
+            <a href="./shop.html">Shop Now</a>
+        </div>
+        <div class="quick-card shoes">
+            <div class="quick-title">
+                <p>Stylish Sneaker Shoes</p>
+            </div>
+            <a href="./shop.html">Shop Now</a>
+        </div>
+    </section>
+
+
+    <section class="brand-slider">
+
+        <div class="slider-track">
+
+            <!-- First Set -->
+            <div class="brand">
+                <h2>travel</h2>
+            </div>
+
+            <div class="brand">
+                <h2>Ray-Ban</h2>
+            </div>
+
+            <div class="brand">
+                <h2>TAMAKI</h2>
+                <span>MARINE PARK</span>
+            </div>
+
+            <div class="brand">
+                <h2>Ray-Ban</h2>
+            </div>
+
+            <div class="brand">
+                <h2>VOGUE</h2>
+            </div>
+
+            <div class="brand">
+                <h2>VERCELLI</h2>
+                <span>CRAFTED IN ITALY</span>
+            </div>
+
+            <!-- Duplicate Set For Infinite Scroll -->
+
+            <div class="brand">
+                <h2>travel</h2>
+            </div>
+
+            <div class="brand">
+                <h2>Ray-Ban</h2>
+            </div>
+
+            <div class="brand">
+                <h2>TAMAKI</h2>
+                <span>MARINE PARK</span>
+            </div>
+
+            <div class="brand">
+                <h2>Ray-Ban</h2>
+            </div>
+
+            <div class="brand">
+                <h2>VOGUE</h2>
+            </div>
+
+            <div class="brand">
+                <h2>VERCELLI</h2>
+                <span>CRAFTED IN ITALY</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--   Hot deals
+ -->
+    <section class="deal-section">
+
+        <div class="deal-content">
+
+            <h1>Deal Of The Week!</h1>
+
+            <div class="deal-timer">
+
+                <div class="deal-text">
+                    🔥 Hurry up!! Sale ends in:
+                </div>
+
+                <div class="timer-box">
+                    <span id="days">1</span>
+                    <p>DAY</p>
+                </div>
+
+                <div class="timer-box">
+                    <span id="hours">11</span>
+                    <p>HRS</p>
+                </div>
+
+                <div class="timer-box">
+                    <span id="minutes">25</span>
+                    <p>MIN</p>
+                </div>
+
+                <div class="timer-box">
+                    <span id="seconds">16</span>
+                    <p>SEC</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+   
+    <section class="popular-products">
+
+        <div class="products-container">
+
+            <div class="products-grid">
+
+                <!-- Product Card 1 -->
+                <div class="product-card">
+
+                    <div class="product-image">
+                        <img src="./src/pants/compressed-17.webp" alt="Product">
+
+                        <div class="product-labels">
+                            <span class="product-label">New</span>
+                            <span class="product-badge">Hot</span>
+                        </div>
+
+                        <div class="product-actions">
+                            <button class="action-btn like-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button class="action-btn">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button class="action-btn">
+                                <i class="fa-solid fa-share"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3 class="product-name">
+                            Stylish Pants
+                        </h3>
+
+                        <div class="product-rating">
+
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+
+                            <span class="rating-count">(120 Reviews)</span>
+
+                        </div>
+
+                        <div class="product-price">
+                            $49
+                            <span class="price-original">$79</span>
+                        </div>
+
+                        <span class="discount-badge">38% OFF</span>
+
+                        <p class="product-desc">
+                             Discover comfortable and trendy pants perfect for every occasion.
+                        </p>
+
+                           <a href="./login.html">
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-card">
+
+                    <div class="product-image">
+                        <img src="./src/shoes/compressed-15.webp" alt="Shoes">
+
+                        <div class="product-labels">
+                            <span class="product-label">Sale</span>
+                        </div>
+
+                        <div class="product-actions">
+                            <button class="action-btn like-btn liked">
+                                <i class="fa-solid fa-heart"></i>
+                            </button>
+
+                            <button class="action-btn">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button class="action-btn">
+                                <i class="fa-solid fa-share"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3 class="product-name">
+                            Office shoe
+                        </h3>
+
+                        <div class="product-rating">
+
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+
+                            <span class="rating-count">(340 Reviews)</span>
+
+                        </div>
+
+                        <div class="product-price">
+                            $99
+                            <span class="price-original">$140</span>
+                        </div>
+
+                        <span class="discount-badge">29% OFF</span>
+
+                        <p class="product-desc">
+                            Professional and comfortable office shoes designed for everyday elegance.
+                        </p>
+
+                           <a href="./login.html">
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="product-card">
+
+                    <div class="product-image">
+                        <img src="./src/shirts/compressed-11.webp" alt="Watch">
+
+                        <div class="product-labels">
+                            <span class="product-label">Trending</span>
+                        </div>
+
+                        <div class="product-actions">
+                            <button class="action-btn like-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button class="action-btn">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button class="action-btn">
+                                <i class="fa-solid fa-share"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3 class="product-name">
+                            Premium Oversized T-Shirt
+                        </h3>
+
+                        <div class="product-rating">
+
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+
+                            <span class="rating-count">(89 Reviews)</span>
+
+                        </div>
+
+                        <div class="product-price">
+                            $199
+                            <span class="price-original">$250</span>
+                        </div>
+
+                        <span class="discount-badge">20% OFF</span>
+
+                        <p class="product-desc">
+                            Stylish premium cotton oversized t-shirt with modern fit and soft fabric.
+                        </p>
+
+                           <a href="./login.html">
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </a>
+
+                    </div>
+
+                </div>
+                <div class="product-card">
+
+                    <div class="product-image">
+                        <img src="./src/handbags/compressed-6.webp" alt="Watch">
+
+                        <div class="product-labels">
+                            <span class="product-label">Trending</span>
+                        </div>
+
+                        <div class="product-actions">
+                            <button class="action-btn like-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button class="action-btn">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button class="action-btn">
+                                <i class="fa-solid fa-share"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3 class="product-name">
+                            Stylish Hand Bag
+                        </h3>
+
+                        <div class="product-rating">
+
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+
+                            <span class="rating-count">(89 Reviews)</span>
+
+                        </div>
+
+                        <div class="product-price">
+                            $199
+                            <span class="price-original">$250</span>
+                        </div>
+
+                        <span class="discount-badge">20% OFF</span>
+
+                        <p class="product-desc">
+                            Elegant handbags designed for fashion, comfort, and daily use.
+                        </p>
+
+                           <a href="./login.html">
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </a>
+
+                    </div>
+
+                </div>
+                <div class="product-card">
+
+                    <div class="product-image">
+                        <img src="./src/glasses/compressed-25.webp" alt="Product">
+
+                        <div class="product-labels">
+                            <span class="product-label">New</span>
+                            <span class="product-badge">Hot</span>
+                        </div>
+
+                        <div class="product-actions">
+                            <button class="action-btn like-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button class="action-btn">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button class="action-btn">
+                                <i class="fa-solid fa-share"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3 class="product-name">
+                            Stylish Glasses
+                        </h3>
+
+                        <div class="product-rating">
+
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+
+                            <span class="rating-count">(120 Reviews)</span>
+
+                        </div>
+
+                        <div class="product-price">
+                            $49
+                            <span class="price-original">$79</span>
+                        </div>
+
+                        <span class="discount-badge">38% OFF</span>
+
+                        <p class="product-desc">
+                            Discover trendy and comfortable glasses designed for everyday style.
+                        </p>
+
+                           <a href="./login.html">
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </a>
+
+                    </div>
+
+                </div>
+                <div class="product-card">
+
+                    <div class="product-image">
+                        <img src="./src/handbags/compressed-2.webp" alt="Watch">
+
+                        <div class="product-labels">
+                            <span class="product-label">Trending</span>
+                        </div>
+
+                        <div class="product-actions">
+                            <button class="action-btn like-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button class="action-btn">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button class="action-btn">
+                                <i class="fa-solid fa-share"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3 class="product-name">
+                            Stylish Leather Hand Bag
+                        </h3>
+
+                        <div class="product-rating">
+
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+
+                            <span class="rating-count">(89 Reviews)</span>
+
+                        </div>
+
+                        <div class="product-price">
+                            $199
+                            <span class="price-original">$250</span>
+                        </div>
+
+                        <span class="discount-badge">20% OFF</span>
+
+                        <p class="product-desc">
+                            Elegant handbags designed for fashion, comfort, and daily use.
+                        </p>
+
+                           <a href="./login.html">
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </a>
+
+                    </div>
+
+                </div>
+                <div class="product-card">
+
+                    <div class="product-image">
+                        <img src="./src/watchs/compressed-8.webp" alt="Watch">
+
+                        <div class="product-labels">
+                            <span class="product-label">Trending</span>
+                        </div>
+
+                        <div class="product-actions">
+                            <button class="action-btn like-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button class="action-btn">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button class="action-btn">
+                                <i class="fa-solid fa-share"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3 class="product-name">
+                            Luxury  Watch
+                        </h3>
+
+                        <div class="product-rating">
+
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+
+                            <span class="rating-count">(89 Reviews)</span>
+
+                        </div>
+
+                        <div class="product-price">
+                            $199
+                            <span class="price-original">$250</span>
+                        </div>
+
+                        <span class="discount-badge">20% OFF</span>
+
+                        <p class="product-desc">
+                            Premium analog watch  and elegant design.
+                        </p>
+
+                           <a href="./login.html">
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </a>
+
+                    </div>
+
+                </div>
+                <div class="product-card">
+
+                    <div class="product-image">
+                        <img src="./src/pants/compressed-21.webp" alt="Watch">
+
+                        <div class="product-labels">
+                            <span class="product-label">Trending</span>
+                        </div>
+
+                        <div class="product-actions">
+                            <button class="action-btn like-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button class="action-btn">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button class="action-btn">
+                                <i class="fa-solid fa-share"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3 class="product-name">
+                            Trendy Footwear
+                        </h3>
+
+                        <div class="product-rating">
+
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+
+                            <span class="rating-count">(89 Reviews)</span>
+
+                        </div>
+
+                        <div class="product-price">
+                            $199
+                            <span class="price-original">$250</span>
+                        </div>
+
+                        <span class="discount-badge">20% OFF</span>
+
+                        <p class="product-desc">
+                            Step into comfort and style with our trendy girls slippers collection.
+                        </p>
+
+                           <a href="./login.html">
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        </div>
+    </section>
+
+    <section class="fashion-banner">
+
+        <!-- Banner 1 -->
+        <div class="fashion-card">
+
+            <div class="fashion-image">
+                <img src="./src/image.webp" alt="">
+            </div>
+
+            <div class="fashion-content">
+                <h2>Men's T-Shirts & Sunglasses Fashion</h2>
+
+                <p>
+                    Fashions Graphic Printed Men Tshirt Saturday Text with Sunglass
+                </p>
+
+                <a href="./products.html">SHOP NOW</a>
+            </div>
+
+        </div>
+
+        <!-- Banner 2 -->
+        <div class="fashion-card">
+
+            <div class="fashion-image">
+                <img src="./src/cms-banner-2.webp" alt="">
+            </div>
+
+            <div class="fashion-content">
+                <h2>Women's Summer Fashion Collection</h2>
+
+                <p>
+                    Stylish floral tops and modern outfits for your daily fashion
+                </p>
+
+                <a href="./products.html">SHOP NOW</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="testimonial-section">
+
+        <!-- LEFT IMAGE -->
+        <div class="testimonial-image">
+            <img src="./src/cms-banner-3.webp" alt="">
+        </div>
+
+        <!-- RIGHT CONTENT -->
+        <div class="testimonial-content">
+
+            <h2>Our Happy Clients</h2>
+
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. It has survived not only five centuries but also the leap
+                into electronic typesetting remaining essentially unchanged.
+            </p>
+
+            <!-- CLIENT -->
+            <div class="client-info">
+
+                <div class="client-image">
+                    <img src="./src/so-compressed.webp" alt="">
+                </div>
+
+                <h3>Stefanie Rashford</h3>
+
+                <span>Founder</span>
+
+            </div>
+
+            <!-- DOTS -->
+            <div class="testimonial-dots">
+                <span class="active"></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="features">
+
+        <div class="feature-item">
+            <i class="ti ti-truck-delivery feature-icon"></i>
+            <p class="feature-title">Worldwide Shipping</p>
+            <p class="feature-desc">Contrary to popular belief lorem is not simply random</p>
+        </div>
+
+        <div class="feature-item">
+            <i class="ti ti-pig-money feature-icon"></i>
+            <p class="feature-title">Money Back Guarantee</p>
+            <p class="feature-desc">Contrary to popular belief lorem is not simply random</p>
+        </div>
+
+        <div class="feature-item">
+            <i class="ti ti-discount-2 feature-icon"></i>
+            <p class="feature-title">Offers And Discounts</p>
+            <p class="feature-desc">Contrary to popular belief lorem is not simply random</p>
+        </div>
+
+        <div class="feature-item">
+            <i class="ti ti-headset feature-icon"></i>
+            <p class="feature-title">24/7 Support Services</p>
+            <p class="feature-desc">Contrary to popular belief lorem is not simply random</p>
+        </div>
+
+    </section>
+
+
+
+
+    <section class="gallery">
+        <h2 class="gallery-title">From The Gallery</h2>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-card">
+                <img src="./src/Untitled design (1)-compressed.webp"
+                    alt="Workspace with laptop and coffee" />
+                <p class="gallery-card-title">How to Write a Blog Post Your Readers Will Love in 5 Steps</p>
+            </div>
+
+            <div class="gallery-card">
+                <img src="./src/Untitled design (2)-compressed.webp"
+                    alt="Clothing rack with pastel garments" />
+                <p class="gallery-card-title">9 Content Marketing Trends and Ideas to Increase Traffic</p>
+            </div>
+
+            <div class="gallery-card">
+                <img src="./src/Untitled design-compressed.webp"
+                    alt="Two women reviewing documents in office" />
+                <p class="gallery-card-title">The Ultimate Guide to Marketing Strategies to Improve Sales</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= NEWSLETTER SECTION ================= -->
+
+<section class="newsletter">
+
+    <h2 class="newsletter-title">
+        Subscribe To Our Newsletter
+    </h2>
+
+    <p class="newsletter-desc">
+        Subscribe to our latest newsletter to get news about special discounts.
+    </p>
+
+    <form class="newsletter-form" id="newsletterForm">
+
+        <div class="input-group">
+
+            <input 
+                type="email"
+                id="emailAddress"
+                placeholder="Your email address"
+                aria-label="Your email address"
+            />
+
+        </div>
+
+        <button type="submit">
+            Subscribe
+        </button>
+
+    </form>
+
+    <div class="newsletter-checkbox">
+
+        <input type="checkbox" id="agree" />
+
+        <label for="agree">
+            I agree to the 
+            <a href="./404.html">terms and conditions</a>
+            and the
+            <a href="./404.html">privacy policy</a>
+        </label>
+
+    </div>
+
+</section>
+    <!-- ================= FOOTER SECTION ================= -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <!-- COLUMN 1 -->
+
+            <div class="footer-col">
+
+                <h3>FASHIUP</h3>
+
+                <p>
+                    Welcome to our store, where we pride ourselves on
+                    providing exceptional products and unparalleled customer service.
+                    Our store is a haven for those who appreciate quality,
+                    style, and innovation.
+                </p>
+
+                <div class="app-buttons">
+                    <a href="./404.html">
+                        <img src="./src/Google_Play-Badge-Logo.wine-compressed.webp">
+                    </a>
+                    <a href="./404.html">
+                        <img src="./src/App_Store_(iOS)-Badge-Logo.wine-compressed.webp">
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- COLUMN 2 -->
+
+            <div class="footer-col">
+
+                <h2>Our Company</h2>
+
+                <div class="footer-links">
+                    <a href="./404.html">Delivery</a>
+                    <a href="./404.html">Legal Notice</a>
+                    <a href="./404.html">Terms and Conditions</a>
+                    <a href="./404.html">Secure Payment</a>
+                    <a href="./contact.hmtl">Contact Us</a>
+                    <a href="./about.html">About Us</a>
+                </div>
+
+            </div>
+
+            <!-- COLUMN 3 -->
+
+            <div class="footer-col">
+
+                <h2>Products</h2>
+
+                <div class="footer-links">
+                    <a href="./products.html">Prices Drop</a>
+                    <a href="./products.html">New Products</a>
+                    <a href="./products.html">Best Sellers</a>
+                    <a href="./products.html">Sitemap</a>
+                    <a href="./products.html">Stores</a>
+                    <a href="./products.html">Accessories</a>
+                </div>
+
+            </div>
+
+            <!-- COLUMN 4 -->
+
+            <div class="footer-col">
+
+                <h2>Store Information</h2>
+
+                <p>
+                    Fashiup - Fashion Store <br>
+                    99 New Theme St. XY, USA 12345, <br>
+                    Beside the Sun point land. <br>
+                    United States
+                </p>
+
+                <p>Call us: +00 123-456-789</p>
+
+                <p>Email us: admin@example.com</p>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <!-- ================= FOOTER BOTTOM ================= -->
+
+        <div class="footer-bottom">
+
+            <!-- SOCIAL -->
+
+            <div class="social-icons">
+
+                <a href="./404.html"><i class="fa-brands fa-facebook-f"></i></a>
+
+                <a href="./404.html"><i class="fa-brands fa-x-twitter"></i></a>
+
+                <a href="./404.html"><i class="fa-brands fa-instagram"></i></a>
+
+                <a href="./404.html"><i class="fa-brands fa-pinterest-p"></i></a>
+
+                <a href="./404.html"><i class="fa-brands fa-google"></i></a>
+
+            </div>
+
+            <!-- COPYRIGHT -->
+
+            <div class="copyright">
+                Copyright © Fashiup. All Rights Reserved
+            </div>
+
+            <!-- PAYMENT -->
+
+            <div class="payment">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/MasterCard_Logo.svg">
+
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Paypal_2014_logo.png">
+
+            </div>
+
+            <!-- TOP BUTTON -->
+            <a href="./index.html">
+                <div class="top-btn" id="topBtn">
+                    <i class="fa-solid fa-angle-up"></i>
+                </div>
+            </a>
+
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

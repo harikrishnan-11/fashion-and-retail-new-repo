@@ -1,0 +1,480 @@
+/* ================= LOGIN SECTION ================= */
+:root{
+
+    /* ===== PRIMARY COLORS ===== */
+
+    --gold: #D4AF37;
+    --gold-dark: #B8912E;
+    --gold-light: #F6E7B2;
+
+    --navy: #0B1420;
+    --navy-light: #162435;
+    --navy-soft: #22344B;
+
+    --cream: #FAF7F2;
+    --cream-dark: #EFE7DA;
+
+    --charcoal: #181818;
+    --silver: #B8B8B8;
+
+    /* ===== PREMIUM ACCENTS ===== */
+
+    --emerald: #0F5132;
+    --emerald-light: #D1F5E4;
+
+    --ruby: #8E1B32;
+    --ruby-light: #FFD6DE;
+
+    --platinum: #E5E4E2;
+    --bronze: #A97142;
+
+    /* ===== TEXT ===== */
+
+    --text-dark: #111827;
+    --text-light: #6B7280;
+    --text-white: #ffffff;
+
+    /* ===== BACKGROUND ===== */
+
+    --bg-light: #FCFBF8;
+    --bg-dark: #08111C;
+
+    /* ===== BORDERS ===== */
+
+    --border-light: rgba(212, 175, 55, 0.18);
+    --border-dark: rgba(15, 20, 32, 0.12);
+
+    /* ===== SHADOWS ===== */
+
+    --shadow-soft: 0 8px 24px rgba(15,20,32,0.08);
+    --shadow-medium: 0 12px 32px rgba(15,20,32,0.14);
+    --shadow-gold: 0 10px 28px rgba(212,175,55,0.25);
+
+    /* ===== PREMIUM GRADIENTS ===== */
+
+    --gradient-gold:
+    linear-gradient(
+        135deg,
+        #D4AF37,
+        #F6E7B2,
+        #B8912E
+    );
+
+    --gradient-dark:
+    linear-gradient(
+        135deg,
+        #08111C,
+        #162435,
+        #22344B
+    );
+
+    --gradient-premium:
+    linear-gradient(
+        135deg,
+        #0B1420,
+        #162435,
+        #D4AF37
+    );
+
+    --gradient-luxury:
+    linear-gradient(
+        135deg,
+        #0F172A 0%,
+        #1E293B 45%,
+        #D4AF37 100%
+    );
+
+    /* ===== GLASS EFFECT ===== */
+
+    --glass-bg: rgba(255,255,255,0.08);
+    --glass-border: rgba(255,255,255,0.12);
+}
+.login{
+    width: 100%;
+    min-height: 60vh;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+    overflow-x: hidden;
+}
+
+
+.login-header{
+    width:100%;
+    background:#f5f5f5;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.login-header h1{
+    font-size:clamp(18px, 5vw, 42px);
+    font-weight:500;
+
+    color:#111;
+
+    margin-bottom:15px;
+}
+
+/* ================= BREADCRUMB ================= */
+
+.breadcrumb{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+}
+
+.breadcrumb a{
+    text-decoration:none;
+
+    color:#111;
+
+    font-size:16px;
+    transition:0.3s;
+}
+
+.breadcrumb a:hover{
+    color:#c97d53;
+}
+
+.breadcrumb span{
+    color:#555;
+}
+
+
+.card-header{
+    text-align: center;
+    margin-bottom: 25px;
+    animation: fadeDown 1s ease;
+}
+
+.card-header h1{
+    font-size: 2.2rem;
+    color: #222;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+/* ================= CARD ================= */
+
+.card-container{
+    width: 100%;
+    max-width: 450px;
+    padding: 35px;
+    border-radius: 22px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+    backdrop-filter: blur(8px);
+    animation: fadeUp 1s ease;
+    transition: 0.4s ease;
+}
+
+.card-container:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.12);
+}
+
+/* ================= FORM ================= */
+
+.auth-form{
+    width: 100%;
+}
+
+.input-group{
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease;
+}
+
+.input-group label{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+.input-group input,
+.input-group select{
+    width: 100%;
+    height: 52px;
+    padding: 0 15px;
+    border: 1px solid #dcdcdc;
+    border-radius: 14px;
+    outline: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+/* INPUT ANIMATION */
+
+.input-group input:focus,
+.input-group select:focus{
+    border-color: #ff5a5f;
+    box-shadow: 0 0 0 5px rgba(255,90,95,0.15);
+    transform: scale(1.02);
+}
+
+/* ================= PASSWORD FIELD ================= */
+
+.password-field{
+    position: relative;
+}
+
+.password-field input{
+    padding-right: 70px;
+}
+
+.toggle-password{
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: #ff5a5f;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.toggle-password:hover{
+    color: #e5494e;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* ================= REMEMBER ROW ================= */
+
+.remember-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.remember-me{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #555;
+}
+
+.remember-row a{
+    color: #ff5a5f;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.remember-row a:hover{
+    text-decoration: underline;
+    transform: translateX(3px);
+}
+
+/* ================= MAIN BUTTON ================= */
+
+.main-btn{
+    width: 100%;
+    height: 54px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(135deg,#ff5a5f,#ff7b54);
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* BUTTON HOVER EFFECT */
+
+.main-btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255,90,95,0.35);
+}
+
+/* SHINE EFFECT */
+
+.main-btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    transform: skewX(-25deg);
+    transition: 0.6s;
+}
+
+.main-btn:hover::before{
+    left: 120%;
+}
+
+/* ================= DIVIDER ================= */
+
+.social-divider{
+    text-align: center;
+    margin: 25px 0;
+    font-size: 14px;
+    color: #777;
+    position: relative;
+}
+
+.social-divider::before,
+.social-divider::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 35%;
+    height: 1px;
+    background: #ddd;
+}
+
+.social-divider::before{
+    left: 0;
+}
+
+.social-divider::after{
+    right: 0;
+}
+
+/* ================= SOCIAL BUTTONS ================= */
+
+.social-row{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.social-btn{
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.4s ease;
+}
+
+.social-btn:hover{
+    transform: translateY(-5px) rotate(8deg);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.google{
+    color: #db4437;
+}
+
+.facebook{
+    color: #1877f2;
+}
+
+.apple{
+    color: #000;
+}
+
+/* ================= FOOTER ================= */
+
+.footer-note{
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+
+.footer-note a{
+    color: #ff5a5f;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.footer-note a:hover{
+    text-decoration: underline;
+}
+
+/* ================= KEYFRAMES ================= */
+
+@keyframes fadeUp{
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown{
+    from{
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+    .card-header h1{
+        font-size: 1.8rem;
+    }
+
+    .card-container{
+        padding: 28px;
+    }
+}
+
+@media(max-width:480px){
+
+    .login{
+        padding: 20px 15px;
+    }
+
+    .card-header h1{
+        font-size: 1.5rem;
+    }
+
+    .card-container{
+        padding: 22px;
+        border-radius: 18px;
+    }
+
+    .input-group input,
+    .input-group select,
+    .main-btn{
+        height: 48px;
+        font-size: 14px;
+    }
+
+    .social-btn{
+        width: 45px;
+        height: 45px;
+    }
+}

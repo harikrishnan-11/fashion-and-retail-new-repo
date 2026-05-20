@@ -1,0 +1,817 @@
+/* ================= GOOGLE FONT ================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ================= ABOUT HEADER ================= */
+:root{
+
+    /* ===== PRIMARY COLORS ===== */
+
+    --gold: #D4AF37;
+    --gold-dark: #B8912E;
+    --gold-light: #F6E7B2;
+
+    --navy: #0B1420;
+    --navy-light: #162435;
+    --navy-soft: #22344B;
+
+    --cream: #FAF7F2;
+    --cream-dark: #EFE7DA;
+
+    --charcoal: #181818;
+    --silver: #B8B8B8;
+
+    /* ===== PREMIUM ACCENTS ===== */
+
+    --emerald: #0F5132;
+    --emerald-light: #D1F5E4;
+
+    --ruby: #8E1B32;
+    --ruby-light: #FFD6DE;
+
+    --platinum: #E5E4E2;
+    --bronze: #A97142;
+
+    /* ===== TEXT ===== */
+
+    --text-dark: #111827;
+    --text-light: #6B7280;
+    --text-white: #ffffff;
+
+    /* ===== BACKGROUND ===== */
+
+    --bg-light: #FCFBF8;
+    --bg-dark: #08111C;
+
+    /* ===== BORDERS ===== */
+
+    --border-light: rgba(212, 175, 55, 0.18);
+    --border-dark: rgba(15, 20, 32, 0.12);
+
+    /* ===== SHADOWS ===== */
+
+    --shadow-soft: 0 8px 24px rgba(15,20,32,0.08);
+    --shadow-medium: 0 12px 32px rgba(15,20,32,0.14);
+    --shadow-gold: 0 10px 28px rgba(212,175,55,0.25);
+
+    /* ===== PREMIUM GRADIENTS ===== */
+
+    --gradient-gold:
+    linear-gradient(
+        135deg,
+        #D4AF37,
+        #F6E7B2,
+        #B8912E
+    );
+
+    --gradient-dark:
+    linear-gradient(
+        135deg,
+        #08111C,
+        #162435,
+        #22344B
+    );
+
+    --gradient-premium:
+    linear-gradient(
+        135deg,
+        #0B1420,
+        #162435,
+        #D4AF37
+    );
+
+    --gradient-luxury:
+    linear-gradient(
+        135deg,
+        #0F172A 0%,
+        #1E293B 45%,
+        #D4AF37 100%
+    );
+
+    /* ===== GLASS EFFECT ===== */
+
+    --glass-bg: rgba(255,255,255,0.08);
+    --glass-border: rgba(255,255,255,0.12);
+}
+.about-header{
+    width:100%;
+    background:#f5f5f5;
+
+    text-align:center;
+    padding:70px 20px;
+}
+
+.about-header h1{
+    font-size:55px;
+    font-weight:500;
+
+    color:#111;
+
+    margin-bottom:15px;
+}
+
+/* ================= BREADCRUMB ================= */
+
+.breadcrumb{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+}
+
+.breadcrumb a{
+    text-decoration:none;
+
+    color:#111;
+
+    font-size:16px;
+    transition:0.3s;
+}
+
+.breadcrumb a:hover{
+    color:#c97d53;
+}
+
+.breadcrumb span{
+    color:#555;
+}
+
+/* ================= ABOUT SECTION ================= */
+
+.about-section{
+    width:100%;
+    max-width:1400px;
+
+    margin:auto;
+    padding:80px 30px;
+}
+
+/* ================= TABS ================= */
+
+.tabs{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    margin-bottom:-1px;
+}
+
+/* ================= BUTTON ================= */
+
+.tab-btn{
+    padding:18px 35px;
+
+    border:1px solid #ddd;
+    
+
+    background:white;
+
+    font-size:20px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.tab-btn:hover{
+    background:#f5f5f5;
+}
+
+.tab-btn.active{
+
+    border-bottom:none;
+}
+
+/* ================= TAB CONTENT ================= */
+
+.tab-content{
+    display:none;
+
+    border:1px solid #ddd;
+
+    padding:40px;
+
+    background:white;
+}
+
+.tab-content.active{
+    display:block;
+}
+
+.tab-content p{
+    font-size:18px;
+    line-height:2;
+
+    color:#555;
+
+    margin-bottom:20px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+    .tabs{
+        flex-direction:column;
+    }
+
+    .tab-btn{
+        width:100%;
+        border-bottom:1px solid #ddd;
+    }
+
+    .tab-content{
+        padding:25px;
+    }
+
+    .tab-content p{
+        font-size:16px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .about-header h1{
+        font-size:30px;
+    }
+
+    .breadcrumb{
+        gap:10px;
+    }
+
+    .breadcrumb a{
+        font-size:14px;
+    }
+
+    .about-section{
+        padding:40px 15px;
+    }
+
+    .about-content{
+        padding:20px;
+    }
+
+    .about-content p{
+        font-size:15px;
+        line-height:1.8;
+    }
+
+    .tab-btn{
+        font-size:16px;
+        padding:15px 20px;
+    }
+
+}
+
+
+/* ================= SERVICE SECTION ================= */
+
+.service-section{
+    width:100%;
+    padding:80px 5%;
+    background:#fff;
+}
+
+/* ================= CONTAINER ================= */
+
+.service-container{
+    width:100%;
+ max-width:1300px;
+
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1.1fr 1fr;
+
+    gap:30px;
+}
+
+/* ================= LEFT IMAGE ================= */
+
+.left-image{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+.left-image img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:0.5s;
+}
+
+/* ================= RIGHT SIDE ================= */
+
+.right-images{
+    display:flex;
+    flex-direction:column;
+        height:100%;
+
+    gap:30px;
+}
+
+/* ================= TOP IMAGE ================= */
+
+.top-image{
+    width:100%;
+    overflow:hidden;
+    flex: 1;
+}
+
+.top-image img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:0.5s;
+}
+
+/* ================= BOTTOM IMAGES ================= */
+
+.bottom-images{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    flex: 1;
+    gap:30px;
+}
+
+.small-image{
+    overflow:hidden;
+}
+
+.small-image img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:0.5s;
+}
+
+/* ================= HOVER EFFECT ================= */
+
+.left-image img:hover,
+.top-image img:hover,
+.small-image img:hover{
+
+    transform:scale(1.05);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:992px){
+
+    .service-container{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .service-section{
+        padding:60px 20px;
+    }
+
+    .bottom-images{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .service-section{
+        padding:40px 15px;
+    }
+
+    .service-container{
+        gap:20px;
+    }
+
+    .right-images{
+        gap:20px;
+    }
+
+    .bottom-images{
+        gap:20px;
+    }
+
+}
+
+
+/* ================= VISION SECTION ================= */
+
+.vision-section{
+    width:100%;
+    padding:100px 5%;
+
+    background:#f5f5f5;
+}
+
+/* ================= CONTAINER ================= */
+
+.vision-container{
+    width:100%;
+    max-width:1300px;
+
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    gap:50px;
+
+    align-items:center;
+}
+
+/* ================= LEFT ================= */
+
+.vision-left h1{
+    font-size:40px;
+    line-height:1.2;
+
+    margin-bottom:20px;
+
+    color:#111;
+}
+
+.vision-left > p{
+    font-size:20px;
+    line-height:1.8;
+
+    color:#666;
+
+    margin-bottom:20px;
+}
+
+/* ================= ACCORDION ================= */
+
+.accordion{
+    display:flex;
+    flex-direction:column;
+
+    gap:15px;
+}
+
+/* ================= ITEM ================= */
+
+.accordion-item{
+    background:white;
+    overflow:hidden;
+}
+
+/* ================= HEADER ================= */
+
+.accordion-header{
+    padding:25px 30px;
+
+    display:flex;
+    align-items:center;
+
+    gap:15px;
+
+    cursor:pointer;
+}
+
+.accordion-header span{
+    font-size:18px;
+}
+
+.accordion-header h3{
+    font-size:20px;
+    color:#111;
+}
+
+/* ================= CONTENT ================= */
+
+.accordion-content{
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:0.5s ease;
+
+    padding:0 30px;
+}
+
+.accordion-item.active .accordion-content{
+    max-height:300px;
+    padding:0 30px 30px;
+}
+
+.accordion-content p{
+    font-size:18px;
+    line-height:2;
+
+    color:#666;
+}
+
+/* ================= RIGHT IMAGE ================= */
+
+.vision-right img{
+    width:100%;
+    display:block;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1035px){
+
+    .vision-container{
+        grid-template-columns:1fr;
+    }
+
+    .vision-left h1{
+        font-size:45px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .vision-section{
+        padding:70px 20px;
+    }
+
+    .vision-left h1{
+        font-size:38px;
+    }
+
+    .vision-left > p{
+        font-size:17px;
+    }
+
+    .accordion-header{
+        padding:20px;
+    }
+
+    .accordion-header h3{
+        font-size:22px;
+    }
+
+    .accordion-content p{
+        font-size:16px;
+        line-height:1.8;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .vision-left h1{
+        font-size:30px;
+    }
+
+    .accordion-header h3{
+        font-size:18px;
+    }
+
+}
+
+
+/* ================= FEATURE SECTION ================= */
+
+.feature-section{
+    width:100%;
+    padding:100px 5%;
+
+    background:white;
+}
+
+/* ================= CONTAINER ================= */
+
+.feature-container{
+    width:100%;
+    max-width:1400px;
+
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+}
+
+/* ================= CARD ================= */
+
+.feature-card{
+    background:white;
+
+    padding:40px 40px;
+
+    text-align:center;
+
+    transition:0.4s;
+
+    border:1px solid rgba(128, 128, 128, 0.288);
+}
+
+/* ================= HOVER ================= */
+
+.feature-card:hover{
+    transform:translateY(-8px);
+
+    border-color:#ddd;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* ================= ICON ================= */
+
+.feature-card i{
+    font-size:65px;
+
+    color:#111;
+
+    margin-bottom:30px;
+}
+
+/* ================= TITLE ================= */
+
+.feature-card h2{
+    font-size:38px;
+    font-weight:500;
+
+    color:#111;
+
+    margin-bottom:20px;
+}
+
+/* ================= PARAGRAPH ================= */
+
+.feature-card p{
+    font-size:18px;
+    line-height:1.9;
+
+    color:#666;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:992px){
+
+    .feature-container{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .feature-section{
+        padding:70px 20px;
+    }
+
+    .feature-container{
+        grid-template-columns:1fr;
+    }
+
+    .feature-card{
+        padding:50px 30px;
+    }
+
+    .feature-card i{
+        font-size:55px;
+    }
+
+    .feature-card h2{
+        font-size:30px;
+    }
+
+    .feature-card p{
+        font-size:16px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .feature-section{
+        padding:50px 15px;
+    }
+
+    .feature-card{
+        padding:40px 20px;
+    }
+
+    .feature-card i{
+        font-size:45px;
+    }
+
+    .feature-card h2{
+        font-size:24px;
+    }
+
+    .feature-card p{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+}
+
+
+/* ================= COUNTER SECTION ================= */
+
+.counter-section{
+    width:100%;
+    min-height:400px;
+
+    background:
+    linear-gradient(rgba(0, 0, 0, 0.322),
+    rgba(0, 0, 0, 0.329)),
+    url("./src/about-page-06.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    /* IMPORTANT */
+
+    background-attachment:fixed;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:80px 5%;
+}
+
+/* ================= OVERLAY ================= */
+
+.overlay{
+    width:100%;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    text-align:center;
+}
+
+/* ================= BOX ================= */
+
+.counter-box h1{
+    font-size:60px;
+    color:white;
+
+    margin-bottom:10px;
+}
+
+.counter-box p{
+    font-size:22px;
+    color:white;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:992px){
+
+    .overlay{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .counter-section{
+        background-attachment:scroll;
+    }
+
+    .counter-box h1{
+        font-size:40px;
+    }
+
+    .counter-box p{
+        font-size:18px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .overlay{
+        grid-template-columns:1fr;
+    }
+
+    .counter-box h1{
+        font-size:50px;
+    }
+
+    .counter-box p{
+        font-size:20px;
+    }
+
+}
