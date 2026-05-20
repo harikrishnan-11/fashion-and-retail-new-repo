@@ -3,10 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>404 Not Found</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            color: #1f2937;
+        }
+        .page-404 {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 24px;
+        }
+        .page-404 h1 {
+            font-size: 96px;
+            margin: 0;
+            letter-spacing: 8px;
+        }
+        .page-404 p {
+            font-size: 18px;
+            margin: 16px 0 24px;
+            max-width: 400px;
+            line-height: 1.5;
+            color: #4b5563;
+        }
+        .page-404 a {
+            display: inline-block;
+            padding: 12px 24px;
+            color: #fff;
+            background: #0f172a;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.2s ease;
+        }
+        .page-404 a:hover {
+            background: #334155;
+        }
+    </style>
 </head>
 <body>
-    404 page
-    
+    <div class="page-404">
+        <h1>404</h1>
+        <p>Sorry, the page you are looking for does not exist. Please check the URL or return to the homepage.</p>
+        <a href="./index.html">Go back home</a>
+    </div>
 </body>
 </html>

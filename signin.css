@@ -152,7 +152,7 @@
 .signin{
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(135deg,#f4f7fb,#eef2ff);
+    background: linear-gradient(135deg,#FCFBF8,#F7F1DF);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -233,8 +233,8 @@
 
 .input-group input:focus,
 .input-group select:focus{
-    border-color: #ff5a5f;
-    box-shadow: 0 0 0 5px rgba(255,90,95,0.15);
+    border-color: #C9A84C;
+    box-shadow: 0 0 0 5px rgba(201,168,76,0.15);
     transform: scale(1.02);
 }
 
@@ -257,7 +257,7 @@
     background: transparent;
     cursor: pointer;
     font-size: 16px;
-    color: #ff5a5f;
+    color: #0F1C2E;
     transition: 0.3s ease;
 }
 
@@ -290,8 +290,12 @@
 }
 
 .checkbox-label a{
-    color: #ff5a5f;
+    color: #0F1C2E;
     font-weight: 600;
+}
+
+.checkbox-label a:hover{
+    color: #C9A84C;
 }
 
 .checkbox-label a:hover{
@@ -305,8 +309,8 @@
     height: 54px;
     border: none;
     border-radius: 14px;
-    background: linear-gradient(135deg,#ff5a5f,#ff7b54);
-    color: white;
+    background: #0F1C2E;
+    color: #D4C49A;
     font-size: 16px;
     font-weight: 700;
     cursor: pointer;
@@ -318,7 +322,7 @@
 
 .main-btn:hover{
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(255,90,95,0.35);
+    box-shadow: 0 10px 25px rgba(201,168,76,0.35);
 }
 
 /* BUTTON SHINE EFFECT */
@@ -413,9 +417,13 @@
 }
 
 .footer-note a{
-    color: #ff5a5f;
+    color: #0F1C2E;
     font-weight: 700;
     transition: 0.3s ease;
+}
+
+.footer-note a:hover{
+    color: #C9A84C;
 }
 
 .footer-note a:hover{
@@ -498,5 +506,48 @@
     .checkbox-label,
     .receive-updates{
         font-size: 13px;
+    }
+}
+
+.error-message{
+    color:#ff3b30;
+    font-size:13px;
+    margin-top:6px;
+    display:block;
+    font-weight:500;
+    animation: fadeError 0.3s ease;
+}
+
+.success-message{
+    width:100%;
+    margin-top:20px;
+    padding:14px;
+    background:#d4edda;
+    color:#155724;
+    border-radius:10px;
+    text-align:center;
+    font-weight:600;
+    animation: fadeSuccess 0.4s ease;
+}
+
+@keyframes fadeError{
+    from{
+        opacity:0;
+        transform:translateY(-5px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeSuccess{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
     }
 }

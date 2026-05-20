@@ -140,76 +140,72 @@ arrow2.addEventListener("click", () => {
 
 
 
-/* email validation in newsletter */
 
-const form        = document.getElementById('newsletterForm');
-const emailInput  = document.getElementById('emailAddress');
-const checkbox    = document.getElementById('agree');
-const checkboxWrapper = document.getElementById('checkboxWrapper');
+// ================= NEWSLETTER VALIDATION =================
+const newsletterForm = document.getElementById('newsletterForm')
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  removeErrors();
+if (newsletterForm) {
+  const emailInput = newsletterForm.querySelector('input[type="email"]')
+  const checkbox = newsletterForm.closest('.newsletter')?.querySelector('input[type="checkbox"]')
+  const checkboxWrapper = newsletterForm.closest('.newsletter')?.querySelector('.newsletter-checkbox') || newsletterForm
 
-  let isValid = true;
-  const email = emailInput.value.trim();
-  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in)$/;
+  if (emailInput && checkbox) {
+    newsletterForm.addEventListener('submit', (e) => {
+      e.preventDefault()
+      removeErrors()
 
-  /* EMAIL VALIDATION */
-  if (email === '') {
-    showError(emailInput, 'Please enter your email address');
-    isValid = false;
-  } else if (!emailPattern.test(email)) {
-    showError(emailInput, 'Email must end with .com or .in');
-    isValid = false;
+      let isValid = true
+      const email = emailInput.value.trim()
+      const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in)$/
+
+      if (email === '') {
+        showError(emailInput, 'Please enter your email address')
+        isValid = false
+      } else if (!emailPattern.test(email)) {
+        showError(emailInput, 'Email must end with .com or .in')
+        isValid = false
+      }
+
+      if (!checkbox.checked) {
+        showCheckboxError('Please accept terms and conditions')
+        isValid = false
+      }
+
+      if (isValid) {
+        window.location.href = './404.html'
+      }
+    })
   }
+}
 
-  /* CHECKBOX VALIDATION */
-  if (!checkbox.checked) {
-    showCheckboxError('Please accept terms and conditions');
-    isValid = false;
-  }
-
-  /* SUCCESS */
-  if (isValid) {
-    showSuccess();
-    form.reset();
-  }
-});
-
-/* ── REMOVE OLD ERRORS ── */
 function removeErrors() {
-  document.querySelectorAll('.error-message, .checkbox-error-msg, .success-message')
-    .forEach(el => el.remove());
-  emailInput.classList.remove('error');
-  checkbox.classList.remove('checkbox-error');
+  document.querySelectorAll('.error-message, .checkbox-error-msg')
+    .forEach(el => el.remove())
+
+  const emailInput = newsletterForm?.querySelector('input[type="email"]')
+  const checkbox = newsletterForm?.closest('.newsletter')?.querySelector('input[type="checkbox"]')
+
+  emailInput?.classList.remove('error')
+  checkbox?.classList.remove('checkbox-error')
 }
 
-/* ── EMAIL ERROR ── */
 function showError(input, message) {
-  input.classList.add('error');
-  const err = document.createElement('small');
-  err.className = 'error-message';
-  err.textContent = message;
-  // append inside .input-group (input's parent)
-  input.parentElement.appendChild(err);
+  input.classList.add('error')
+  const err = document.createElement('small')
+  err.className = 'error-message'
+  err.textContent = message
+  input.parentElement.appendChild(err)
 }
 
-/* ✅ FIX 2: checkbox error goes inside #checkboxWrapper, not section */
 function showCheckboxError(message) {
-  checkbox.classList.add('checkbox-error');
-  const err = document.createElement('small');
-  err.className = 'checkbox-error-msg';
-  err.textContent = message;
-  checkboxWrapper.appendChild(err);
-}
+  const checkbox = newsletterForm?.closest('.newsletter')?.querySelector('input[type="checkbox"]')
+  const checkboxWrapper = newsletterForm?.closest('.newsletter')?.querySelector('.newsletter-checkbox') || newsletterForm
 
-/* ── SUCCESS MESSAGE ── */
-function showSuccess() {
-  const msg = document.createElement('small');
-  msg.className = 'success-message';
-  msg.textContent = '🎉 You\'ve subscribed successfully!';
-  form.appendChild(msg);
+  checkbox?.classList.add('checkbox-error')
+  const err = document.createElement('small')
+  err.className = 'checkbox-error-msg'
+  err.textContent = message
+  checkboxWrapper.appendChild(err)
 }
 
 

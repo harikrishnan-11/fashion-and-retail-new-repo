@@ -1,4 +1,3 @@
-
 /* PASSWORD TOGGLE FUNCTION */
 
 function setupPasswordToggle(buttonId, inputId){
@@ -16,7 +15,7 @@ function setupPasswordToggle(buttonId, inputId){
             passwordInput.type = 'text';
 
             toggleBtn.innerHTML =
-            '<i class="fas fa-eye-slash"></i>';
+            '<i class="fa-solid fa-eye-slash"></i>';
 
         } else {
 
@@ -30,45 +29,7 @@ function setupPasswordToggle(buttonId, inputId){
     });
 
 }
-/* MOBILE NUMBER VALIDATION */
 
-/* PHONE NUMBER LIVE VALIDATION */
-
-const phoneInput =
-document.getElementById('phoneNumber');
-
-phoneInput.addEventListener('input', () => {
-
-    /* REMOVE OLD ERROR */
-
-    const existingError =
-    phoneInput.parentElement
-    .querySelector('.error-message');
-
-    if(existingError){
-
-        existingError.remove();
-    }
-
-    /* REMOVE NON-NUMBERS */
-
-    phoneInput.value =
-    phoneInput.value.replace(/\D/g, '');
-
-    /* SHOW ERROR IF MORE THAN 10 DIGITS */
-
-    if(phoneInput.value.length > 10){
-
-        showError(
-            phoneInput,
-            'Mobile number should not exceed 10 digits.'
-        );
-
-        phoneInput.value =
-        phoneInput.value.slice(0,10);
-    }
-
-});
 /* ENABLE PASSWORD TOGGLES */
 
 setupPasswordToggle(
@@ -81,11 +42,16 @@ setupPasswordToggle(
     'confirmPassword'
 );
 
-
-/* CREATE ERROR ELEMENTS */
+/* INPUTS */
 
 const fullNameInput =
 document.getElementById('fullName');
+
+const phoneInput =
+document.getElementById('phoneNumber');
+
+const emailInput =
+document.getElementById('emailAddress');
 
 const passwordInput =
 document.getElementById('signupPassword');
@@ -96,8 +62,51 @@ document.getElementById('confirmPassword');
 const form =
 document.querySelector('.auth-form');
 
+/* PHONE VALIDATION */
 
-/* VALIDATION */
+phoneInput.addEventListener('input', () => {
+
+    removeSingleError(phoneInput);
+
+    phoneInput.value =
+    phoneInput.value.replace(/\D/g, '');
+
+    if(phoneInput.value.length > 10){
+
+        phoneInput.value =
+        phoneInput.value.slice(0,10);
+
+    }
+
+});
+
+/* EMAIL VALIDATION */
+
+emailInput.addEventListener('input', () => {
+
+    removeSingleError(emailInput);
+
+    const email =
+    emailInput.value.trim();
+
+    const emailPattern =
+    /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in)$/;
+
+    if(
+        email.length > 0 &&
+        !emailPattern.test(email)
+    ){
+
+        showError(
+            emailInput,
+            'Email must end with .com or .in'
+        );
+
+    }
+
+});
+
+/* FORM SUBMIT */
 
 form.addEventListener('submit', function(e){
 
@@ -107,7 +116,7 @@ form.addEventListener('submit', function(e){
 
     let isValid = true;
 
-    /* NAME VALIDATION */
+    /* FULL NAME VALIDATION */
 
     const fullName =
     fullNameInput.value.trim();
@@ -123,6 +132,52 @@ form.addEventListener('submit', function(e){
         );
 
         isValid = false;
+
+    }
+
+    /* PHONE VALIDATION */
+
+    if(phoneInput.value.length !== 10){
+
+        showError(
+            phoneInput,
+            'Phone number must contain 10 digits.'
+        );
+
+        isValid = false;
+
+    }
+
+    /* EMAIL VALIDATION */
+
+    const email =
+    emailInput.value.trim();
+
+    const emailPattern =
+    /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in)$/;
+
+    if(!emailPattern.test(email)){
+
+        showError(
+            emailInput,
+            'Enter a valid email address.'
+        );
+
+        isValid = false;
+
+    }
+
+    /* PASSWORD LENGTH */
+
+    if(passwordInput.value.length < 6){
+
+        showError(
+            passwordInput,
+            'Password must be at least 6 characters.'
+        );
+
+        isValid = false;
+
     }
 
     /* PASSWORD MATCH */
@@ -138,59 +193,46 @@ form.addEventListener('submit', function(e){
         );
 
         isValid = false;
+
     }
 
-    /* SUCCESS */
+    /* SUCCESS MESSAGE */
 
     if(isValid){
 
-        window.location.href =
-        'index.html';
+        const oldSuccess =
+        document.querySelector('.success-message');
+
+        if(oldSuccess){
+
+            oldSuccess.remove();
+
+        }
+
+        const successMessage =
+        document.createElement('div');
+
+        successMessage.className =
+        'success-message';
+
+        successMessage.innerText =
+        'Account created successfully! Redirecting...';
+
+        form.appendChild(successMessage);
+
+        setTimeout(() => {
+
+            window.location.href =
+            'login.html';
+
+        }, 2000);
 
     }
 
 });
 
-/* LIVE EMAIL VALIDATION */
-
-const emailInput =
-document.getElementById('emailAddress');
-
-emailInput.addEventListener('input', () => {
-
-    /* REMOVE OLD ERROR */
-
-    const existingError =
-    emailInput.parentElement
-    .querySelector('.error-message');
-
-    if(existingError){
-
-        existingError.remove();
-    }
-
-    const email =
-    emailInput.value.trim();
-
-    const emailPattern =
-    /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in)$/;
-
-    /* SHOW ERROR ONLY WHEN USER TYPES */
-
-    if(
-        email.length > 0 &&
-        !emailPattern.test(email)
-    ){
-
-        showError(
-            emailInput,
-            'Email must end with .com or .in'
-        );
-
-    }
-
-});
 /* SHOW ERROR */
+
 function showError(input, message){
 
     const error =
@@ -202,9 +244,9 @@ function showError(input, message){
     error.innerText =
     message;
 
-    /* PASSWORD FIELD FIX */
-
-    if(input.parentElement.classList.contains('password-field')){
+    if(
+        input.parentElement.classList.contains('password-field')
+    ){
 
         input.parentElement.parentElement
         .appendChild(error);
@@ -217,7 +259,38 @@ function showError(input, message){
     }
 
 }
-/* REMOVE ERRORS */
+
+/* REMOVE SINGLE ERROR */
+
+function removeSingleError(input){
+
+    let error;
+
+    if(
+        input.parentElement.classList.contains('password-field')
+    ){
+
+        error =
+        input.parentElement.parentElement
+        .querySelector('.error-message');
+
+    } else {
+
+        error =
+        input.parentElement
+        .querySelector('.error-message');
+
+    }
+
+    if(error){
+
+        error.remove();
+
+    }
+
+}
+
+/* REMOVE ALL ERRORS */
 
 function removeErrors(){
 

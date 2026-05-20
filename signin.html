@@ -54,7 +54,7 @@
                     <li><a href="./index.html">HOME</a></li>
                     <li><a href="./products.html">PRODUCTS<span class="badge hot">HOT</span></a></li>
                     <li><a href="./gallary.html">GALLARY</a></li>
-                    <li><a href=".about.html">ABOUT US</a></li>
+                    <li><a href="./about.html">ABOUT US</a></li>
                     <li><a href="./contact.html">CONTACT</a></li>
 
 
@@ -66,21 +66,7 @@
 
                     <div class="icons">
 
-                        <div class="wishlist">
-                            <div>
-                                <i class="fa-regular fa-heart"></i>
-                                <span class="count">0</span>
-                            </div>
-                            <h3>Whishlist</h3>
-                        </div>
-
-                        <div class="card">
-                            <div>
-                                <i class="fa-solid fa-bag-shopping"></i>
-                                <span class="count">0</span>
-                            </div>
-                            <h3>Add to Card</h3>
-                        </div>
+            
 
                     <a href="./login.html">
                         <div class="login-btn">
@@ -163,12 +149,9 @@
                             </option>
 
                             <option value="Hotel">
-                                Restaurant Admin
+                                Admin
                             </option>
 
-                            <option value="Delivery">
-                                Delivery Partner
-                            </option>
                         </select>
                     </div>
                     <div class="input-group">
@@ -191,7 +174,7 @@
                                 autocomplete="off">
 
                             <button type="button" class="toggle-password" id="toggleSignupPassword">
-                                <i class="fas fa-eye"></i>
+                                <i class="fa-solid fa-eye"></i>
                             </button>
 
                         </div>
@@ -206,7 +189,7 @@
                                 autocomplete="off">
 
                             <button type="button" class="toggle-password" id="toggleConfirmPassword">
-                                <i class="fas fa-eye"></i>
+                                <i class="fa-solid fa-eye"></i>
                             </button>
 
                         </div>
@@ -222,10 +205,9 @@
                         <input type="checkbox" id="updates" required>
                         <label for="updates">I wish to receive promotions and updates</label>
                     </div>
-                    <a href="./login.html">
-                        <button type="submit" class="main-btn">CREATE ACCOUNT</button>
-                    </a>
-
+                    <button type="submit" class="main-btn">
+    CREATE ACCOUNT
+</button>
                     <div class="social-divider">or continue with</div>
 
                     <div class="social-row">
@@ -249,22 +231,50 @@
 
 
 
-    <section class="newsletter">
-        <h2 class="newsletter-title">Subscribe To Our Newsletter</h2>
-        <p class="newsletter-desc">Subscribe to our latest newsletter to get news about special discounts.</p>
+   
+<section class="newsletter">
 
-        <div class="newsletter-form">
-            <input type="email" placeholder="Your email address" aria-label="Your email address" />
-            <button type="button">Subscribe</button>
+    <h2 class="newsletter-title">
+        Subscribe To Our Newsletter
+    </h2>
+
+    <p class="newsletter-desc">
+        Subscribe to our latest newsletter to get news about special discounts.
+    </p>
+
+    <form class="newsletter-form" id="newsletterForm">
+
+        <div class="input-group">
+
+            <input 
+    type="email"
+    id="newsletterEmail"
+                placeholder="Your email address"
+                aria-label="Your email address"
+            />
+
         </div>
 
-        <div class="newsletter-checkbox">
-            <input type="checkbox" id="agree" />
-            <label for="agree">
-                I agree to the <a href="#">terms and conditions</a> and the <a href="#">privacy policy</a>
-            </label>
-        </div>
-    </section>
+        <button type="submit">
+            Subscribe
+        </button>
+
+    </form>
+
+    <div class="newsletter-checkbox">
+
+        <input type="checkbox" id="agree" />
+
+        <label for="agree">
+            I agree to the 
+            <a href="./404.html">terms and conditions</a>
+            and the
+            <a href="./404.html">privacy policy</a>
+        </label>
+
+    </div>
+
+</section>
     <!-- ================= FOOTER SECTION ================= -->
 
     <footer>
@@ -276,7 +286,6 @@
             <div class="footer-col">
 
                 <h3>FASHIUP</h3>
-
                 <p>
                     Welcome to our store, where we pride ourselves on
                     providing exceptional products and unparalleled customer service.
@@ -285,10 +294,12 @@
                 </p>
 
                 <div class="app-buttons">
-
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg">
-
-                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg">
+                    <a href="./404.html">
+                        <img src="./src/Google_Play-Badge-Logo.wine-compressed.webp">
+                    </a>
+                    <a href="./404.html">
+                        <img src="./src/App_Store_(iOS)-Badge-Logo.wine-compressed.webp">
+                    </a>
 
                 </div>
 
@@ -301,12 +312,12 @@
                 <h2>Our Company</h2>
 
                 <div class="footer-links">
-                    <a href="#">Delivery</a>
-                    <a href="#">Legal Notice</a>
-                    <a href="#">Terms and Conditions</a>
-                    <a href="#">Secure Payment</a>
-                    <a href="#">Contact Us</a>
-                    <a href="#">About Us</a>
+                    <a href="./404.html">Delivery</a>
+                    <a href="./404.html">Legal Notice</a>
+                    <a href="./404.html">Terms and Conditions</a>
+                    <a href="./404.html">Secure Payment</a>
+                    <a href="./contact.hmtl">Contact Us</a>
+                    <a href="./about.html">About Us</a>
                 </div>
 
             </div>
@@ -318,12 +329,12 @@
                 <h2>Products</h2>
 
                 <div class="footer-links">
-                    <a href="#">Prices Drop</a>
-                    <a href="#">New Products</a>
-                    <a href="#">Best Sellers</a>
-                    <a href="#">Sitemap</a>
-                    <a href="#">Stores</a>
-                    <a href="#">Accessories</a>
+                    <a href="./products.html">Prices Drop</a>
+                    <a href="./products.html">New Products</a>
+                    <a href="./products.html">Best Sellers</a>
+                    <a href="./products.html">Sitemap</a>
+                    <a href="./products.html">Stores</a>
+                    <a href="./products.html">Accessories</a>
                 </div>
 
             </div>
@@ -362,15 +373,15 @@
 
             <div class="social-icons">
 
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="./404.html"><i class="fa-brands fa-facebook-f"></i></a>
 
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="./404.html"><i class="fa-brands fa-x-twitter"></i></a>
 
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="./404.html"><i class="fa-brands fa-instagram"></i></a>
 
-                <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                <a href="./404.html"><i class="fa-brands fa-pinterest-p"></i></a>
 
-                <a href="#"><i class="fa-brands fa-google"></i></a>
+                <a href="./404.html"><i class="fa-brands fa-google"></i></a>
 
             </div>
 
@@ -383,9 +394,6 @@
             <!-- PAYMENT -->
 
             <div class="payment">
-
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg">
-
                 <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/MasterCard_Logo.svg">
 
                 <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Paypal_2014_logo.png">
@@ -393,10 +401,11 @@
             </div>
 
             <!-- TOP BUTTON -->
-
-            <div class="top-btn" id="topBtn">
-                <i class="fa-solid fa-angle-up"></i>
-            </div>
+            <a href="./index.html">
+                <div class="top-btn" id="topBtn">
+                    <i class="fa-solid fa-angle-up"></i>
+                </div>
+            </a>
 
         </div>
 

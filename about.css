@@ -169,7 +169,7 @@
     border:1px solid #ddd;
     
 
-    background:white;
+    background:var(--bg-light);
 
     font-size:20px;
     font-weight:600;
@@ -731,7 +731,7 @@
     background:
     linear-gradient(rgba(0, 0, 0, 0.322),
     rgba(0, 0, 0, 0.329)),
-    url("./src/about-page-06.jpg");
+    url("./src/about-page-06-compressed.webp");
 
     background-size:cover;
     background-position:center;
