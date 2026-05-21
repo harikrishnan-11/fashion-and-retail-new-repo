@@ -836,29 +836,38 @@ header {
     display: block;
     animation: fadeInUp 0.7s ease both;
 }
-
+.top-para{
+    display: inline;
+    text-align: flex-start;
+    width:fit-content;
+}
 .hero-content p {
     font-size: 20px;
     letter-spacing: 2px;
     margin-bottom: 20px;
-    color: #D4C49A;
+    color: var(--bg-dark);
+    background-color: var(--gold);
+    padding: 5px;
+    border-radius: 10px;
     text-transform: uppercase;
     animation: fadeInUp 0.7s 0.1s ease both;
+    width: fit-content;
 }
 
 .hero-content h1 {
-    font-size: 78px;
+    font-size: 88px;
     line-height: 1.1;
     font-weight: bold;
     margin-bottom: 35px;
     text-transform: capitalize;
     animation: fadeInUp 0.7s 0.2s ease both;
+    color: white;
 }
 
 .hero-content button {
     padding: 18px 38px;
     border: 1px solid #C9A84C;
-    background: transparent;
+    background:var(--gradient-dark);
     color: #C9A84C;
     font-size: 13px;
     font-weight: bold;
