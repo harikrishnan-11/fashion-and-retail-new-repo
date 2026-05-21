@@ -27,8 +27,15 @@ authForm.addEventListener('submit', function(e) {
     }
 
     /* PASSWORD VALIDATION */
-    if (passwordInput.value.trim() === '') {
+    const password = passwordInput.value;
+    // Pattern: At least 1 letter, 1 number, and 6 or more total characters
+    const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{6,}$/;
+
+    if (password === '') {
         showError(passwordInput, 'Please enter your password');
+        valid = false;
+    } else if (!passwordPattern.test(password)) {
+        showError(passwordInput, 'Password must be at least 6 characters and contain both letters and numbers.');
         valid = false;
     }
 
@@ -48,10 +55,8 @@ authForm.addEventListener('submit', function(e) {
     /* ✅ REDIRECT based on role */
     if (selectedRole === 'User') {
         window.location.href = 'User.html';
-
     } else if (selectedRole === 'Admin') {
         window.location.href = 'admin.html';
-
     } else {
         alert('Please select a valid role.');
     }
@@ -83,10 +88,14 @@ function clearErrors() {
 
 
 /* ================= PASSWORD TOGGLE ================= */
-
+/* 
 function setupPasswordToggle(toggleId, inputId) {
     const toggleBtn     = document.getElementById(toggleId);
     const passwordField = document.getElementById(inputId);
+    
+    // Safety check in case the element doesn't exist on the page
+    if (!toggleBtn || !passwordField) return; 
+    
     const eyeIcon       = toggleBtn.querySelector('i');
 
     toggleBtn.addEventListener('click', () => {
@@ -100,4 +109,4 @@ function setupPasswordToggle(toggleId, inputId) {
     });
 }
 
-setupPasswordToggle('togglePassword', 'password');
+setupPasswordToggle('togglePassword', 'password'); */

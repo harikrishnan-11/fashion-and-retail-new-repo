@@ -1,4 +1,4 @@
-/* PASSWORD TOGGLE FUNCTION */
+/* ================= PASSWORD TOGGLE FUNCTION ================= */
 
 function setupPasswordToggle(buttonId, inputId){
 
@@ -8,29 +8,33 @@ function setupPasswordToggle(buttonId, inputId){
     const passwordInput =
     document.getElementById(inputId);
 
-    toggleBtn.addEventListener('click', () => {
+    if(toggleBtn && passwordInput){
 
-        if(passwordInput.type === 'password'){
+        toggleBtn.addEventListener('click', () => {
 
-            passwordInput.type = 'text';
+            if(passwordInput.type === 'password'){
 
-            toggleBtn.innerHTML =
-            '<i class="fa-solid fa-eye-slash"></i>';
+                passwordInput.type = 'text';
 
-        } else {
+                toggleBtn.innerHTML =
+                '<i class="fa-solid fa-eye-slash"></i>';
 
-            passwordInput.type = 'password';
+            } else {
 
-            toggleBtn.innerHTML =
-            '<i class="fas fa-eye"></i>';
+                passwordInput.type = 'password';
 
-        }
+                toggleBtn.innerHTML =
+                '<i class="fa-solid fa-eye"></i>';
 
-    });
+            }
+
+        });
+
+    }
 
 }
 
-/* ENABLE PASSWORD TOGGLES */
+/* ================= ENABLE PASSWORD TOGGLES ================= */
 
 setupPasswordToggle(
     'toggleSignupPassword',
@@ -42,7 +46,7 @@ setupPasswordToggle(
     'confirmPassword'
 );
 
-/* INPUTS */
+/* ================= INPUTS ================= */
 
 const fullNameInput =
 document.getElementById('fullName');
@@ -62,25 +66,73 @@ document.getElementById('confirmPassword');
 const form =
 document.querySelector('.auth-form');
 
-/* PHONE VALIDATION */
+/* ================= PHONE VALIDATION ================= */
 
-phoneInput.addEventListener('input', () => {
+/* BLOCK LETTERS */
 
-    removeSingleError(phoneInput);
+phoneInput.addEventListener('keydown', (e) => {
 
-    phoneInput.value =
-    phoneInput.value.replace(/\D/g, '');
+    const allowedKeys = [
+        'Backspace',
+        'Delete',
+        'ArrowLeft',
+        'ArrowRight',
+        'Tab'
+    ];
 
-    if(phoneInput.value.length > 10){
+    if(allowedKeys.includes(e.key)){
 
-        phoneInput.value =
-        phoneInput.value.slice(0,10);
+        return;
+
+    }
+
+    /* ONLY NUMBERS */
+
+    if(!/^\d$/.test(e.key)){
+
+        e.preventDefault();
 
     }
 
 });
 
-/* EMAIL VALIDATION */
+/* CLEAN INPUT */
+
+phoneInput.addEventListener('input', () => {
+
+    removeSingleError(phoneInput);
+
+    /* REMOVE NON-NUMBERS */
+
+    phoneInput.value =
+    phoneInput.value.replace(/[^0-9]/g, '');
+
+    /* LIMIT TO 10 DIGITS */
+
+    if(phoneInput.value.length > 10){
+
+        phoneInput.value =
+        phoneInput.value.slice(0, 10);
+
+    }
+
+    /* LIVE VALIDATION */
+
+    if(
+        phoneInput.value.length > 0 &&
+        phoneInput.value.length < 10
+    ){
+
+        showError(
+            phoneInput,
+            'Phone number must contain exactly 10 digits.'
+        );
+
+    }
+
+});
+
+/* ================= EMAIL VALIDATION ================= */
 
 emailInput.addEventListener('input', () => {
 
@@ -106,7 +158,54 @@ emailInput.addEventListener('input', () => {
 
 });
 
-/* FORM SUBMIT */
+/* ================= PASSWORD VALIDATION ================= */
+
+passwordInput.addEventListener('input', () => {
+
+    removeSingleError(passwordInput);
+
+    const password =
+    passwordInput.value;
+
+    const passwordPattern =
+    /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{6,}$/;
+
+    if(
+        password.length > 0 &&
+        !passwordPattern.test(password)
+    ){
+
+        showError(
+            passwordInput,
+            'Password must contain 6+ characters, letters and numbers.'
+        );
+
+    }
+
+});
+
+/* ================= CONFIRM PASSWORD ================= */
+
+confirmPasswordInput.addEventListener('input', () => {
+
+    removeSingleError(confirmPasswordInput);
+
+    if(
+        confirmPasswordInput.value.length > 0 &&
+        passwordInput.value !==
+        confirmPasswordInput.value
+    ){
+
+        showError(
+            confirmPasswordInput,
+            'Passwords do not match.'
+        );
+
+    }
+
+});
+
+/* ================= FORM SUBMIT ================= */
 
 form.addEventListener('submit', function(e){
 
@@ -116,7 +215,7 @@ form.addEventListener('submit', function(e){
 
     let isValid = true;
 
-    /* FULL NAME VALIDATION */
+    /* ================= FULL NAME VALIDATION ================= */
 
     const fullName =
     fullNameInput.value.trim();
@@ -135,20 +234,22 @@ form.addEventListener('submit', function(e){
 
     }
 
-    /* PHONE VALIDATION */
+    /* ================= PHONE VALIDATION ================= */
 
-    if(phoneInput.value.length !== 10){
+    if(
+        !/^\d{10}$/.test(phoneInput.value)
+    ){
 
         showError(
             phoneInput,
-            'Phone number must contain 10 digits.'
+            'Phone number must contain exactly 10 digits.'
         );
 
         isValid = false;
 
     }
 
-    /* EMAIL VALIDATION */
+    /* ================= EMAIL VALIDATION ================= */
 
     const email =
     emailInput.value.trim();
@@ -167,20 +268,23 @@ form.addEventListener('submit', function(e){
 
     }
 
-    /* PASSWORD LENGTH */
+    /* ================= PASSWORD VALIDATION ================= */
 
-    if(passwordInput.value.length < 6){
+    const passwordPattern =
+    /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{6,}$/;
+
+    if(!passwordPattern.test(passwordInput.value)){
 
         showError(
             passwordInput,
-            'Password must be at least 6 characters.'
+            'Password must contain 6+ characters, letters and numbers.'
         );
 
         isValid = false;
 
     }
 
-    /* PASSWORD MATCH */
+    /* ================= PASSWORD MATCH ================= */
 
     if(
         passwordInput.value !==
@@ -196,44 +300,25 @@ form.addEventListener('submit', function(e){
 
     }
 
-    /* SUCCESS MESSAGE */
+    /* ================= SUCCESS ================= */
 
     if(isValid){
 
-        const oldSuccess =
-        document.querySelector('.success-message');
 
-        if(oldSuccess){
+        /* REDIRECT TO LOGIN PAGE */
 
-            oldSuccess.remove();
-
-        }
-
-        const successMessage =
-        document.createElement('div');
-
-        successMessage.className =
-        'success-message';
-
-        successMessage.innerText =
-        'Account created successfully! Redirecting...';
-
-        form.appendChild(successMessage);
-
-        setTimeout(() => {
-
-            window.location.href =
-            'login.html';
-
-        }, 2000);
+        window.location.href =
+        'login.html';
 
     }
 
 });
 
-/* SHOW ERROR */
+/* ================= SHOW ERROR ================= */
 
 function showError(input, message){
+
+    removeSingleError(input);
 
     const error =
     document.createElement('small');
@@ -260,7 +345,7 @@ function showError(input, message){
 
 }
 
-/* REMOVE SINGLE ERROR */
+/* ================= REMOVE SINGLE ERROR ================= */
 
 function removeSingleError(input){
 
@@ -290,7 +375,7 @@ function removeSingleError(input){
 
 }
 
-/* REMOVE ALL ERRORS */
+/* ================= REMOVE ALL ERRORS ================= */
 
 function removeErrors(){
 

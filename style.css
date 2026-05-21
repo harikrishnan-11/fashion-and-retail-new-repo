@@ -917,6 +917,17 @@ header {
     .hero-content h1 {
         font-size: 55px;
     }
+    .top-para{
+    display: inline;
+    text-align: center;
+    width:100%;
+}
+.hero-content p {
+    width:100%;
+    text-align: center;
+    
+}
+
 }
 
 @media(max-width:768px) {
