@@ -874,7 +874,7 @@ header {
     margin-bottom: 35px;
     text-transform: capitalize;
     animation: fadeInUp 0.7s 0.2s ease both;
-    color: white;
+    color:var(--navy-light);
 }
 
 .hero-content button {
@@ -951,10 +951,12 @@ header {
 
     .hero-content p {
         font-size: 16px;
+
     }
 
     .hero-content h1 {
         font-size: 42px;
+        color: white;
     }
 
     .hero-content button {
