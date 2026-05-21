@@ -3,7 +3,7 @@
 // Hero section
 
 let hero = document.querySelector(".hero")
-let image = ["./src/home.webp", "src/home1.webp"]
+let image = ["src/main-banner-1-compressed.webp", "src/main-banner-2-compressed.webp"]
 let clslist = document.querySelectorAll(".hero-content")
 let index = 0
 
