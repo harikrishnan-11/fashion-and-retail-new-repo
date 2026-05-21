@@ -1008,9 +1008,9 @@ footer {
     max-width: 1400px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 60px;
-    padding: 80px 60px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px;
+    padding: 50px 60px;
 }
 
 .footer-col h2 {
