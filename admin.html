@@ -89,9 +89,12 @@
     <div class="topbar">
  
       <div class="topbar-left">
-        <div class="welcome-tag">
-          Home
-        </div>
+        <a href="./index.html">
+
+            <div class="welcome-tag">
+              Home
+            </div>
+        </a>
  
         <h1 id="dashboardTitle">
           Admin Dashboard
@@ -766,84 +769,107 @@
 </div>
  
 <script>
- 
-const email = sessionStorage.getItem('userEmail') || 'guest@stackly.app';
- 
-document.getElementById('topbarEmailBadge').textContent = email;
- 
-const badge = document.getElementById('topbarEmailBadges');
- 
-if(badge){
-    badge.textContent = email;
-}
- 
-const hamburger = document.getElementById('hamburger');
-const sidebar = document.getElementById('sidebar');
-const overlay = document.getElementById('overlay');
- 
-function openSidebar() {
-  sidebar.classList.add('open');
-  overlay.classList.add('active');
-  hamburger.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
- 
-function closeSidebar() {
-  sidebar.classList.remove('open');
-  overlay.classList.remove('active');
-  hamburger.classList.remove('open');
-  document.body.style.overflow = '';
-}
- 
-hamburger.addEventListener('click', () => {
- 
-  if(sidebar.classList.contains('open')) {
-    closeSidebar();
-  } else {
-    openSidebar();
-  }
- 
-});
- 
-overlay.addEventListener('click', closeSidebar);
- 
-function logout() {
-  sessionStorage.removeItem('userEmail');
-  window.location.href = 'index.html';
-}
- 
- 
- 
-const navLinks = document.querySelectorAll('.nav-link');
-const pages = document.querySelectorAll('.page-content');
- 
-navLinks.forEach(link => {
- 
-    link.addEventListener('click', function(e){
- 
-        e.preventDefault();
- 
-        navLinks.forEach(item => {
-            item.classList.remove('active');
-        });
- 
-        this.classList.add('active');
- 
-        const target = this.dataset.page;
- 
-        pages.forEach(page => {
-            page.classList.remove('active-page');
-        });
- 
-        document.getElementById(target)
-        .classList.add('active-page');
- 
-    });
- 
-});
-/* ROLE */
     
- 
+/* AUTH GUARD — redirect if not logged in */
+const email = localStorage.getItem('loggedInUser');
+
+if (!email) {
+    window.location.href = 'index.html';
+}
+
+/* DISPLAY EMAIL */
+const topbarEmailBadge = document.getElementById('topbarEmailBadge');
+if (topbarEmailBadge) topbarEmailBadge.textContent = email;
+
+/* DISPLAY USERNAME */
+const userText = document.getElementById('text');
+if (userText && email) {
+    const username = email.split('@')[0];
+    userText.textContent = username.charAt(0).toUpperCase() + username.slice(1);
+}
+
+/* SIDEBAR */
+const hamburger = document.getElementById('hamburger');
+const sidebar   = document.getElementById('sidebar');
+const overlay   = document.getElementById('overlay');
+
+function openSidebar() {
+    sidebar.classList.add('open');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeSidebar() {
+    sidebar.classList.remove('open');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+hamburger.addEventListener('click', () => {
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+});
+
+overlay.addEventListener('click', closeSidebar);
+
+/* LOGOUT */
+function logout() {
+    localStorage.removeItem('loggedInUser');
+    localStorage.removeItem('userRole');
+    window.location.href = 'index.html';
+}
+
+/* PAGE TITLES */
+const pageTitles = {
+    dashboard    : 'Admin Dashboard',
+    analytics    : 'Analytics',
+    notifications: 'Notifications',
+    settings     : 'Settings',
+    support      : 'Support'
+};
+
+/* NAV SWITCHING */
+const navLinks = document.querySelectorAll('.nav-link');
+const pages    = document.querySelectorAll('.page-content');
+
+function switchPage(targetId) {
+    pages.forEach(p => p.classList.remove('active-page'));
+    const target = document.getElementById(targetId);
+    if (target) target.classList.add('active-page');
+
+    const title = document.getElementById('dashboardTitle');
+    if (title && pageTitles[targetId]) title.textContent = pageTitles[targetId];
+}
+
+navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        navLinks.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+
+        switchPage(this.dataset.page);
+
+        /* Auto-close sidebar on mobile */
+        if (window.innerWidth <= 991) closeSidebar();
+    });
+});
+
+/* RESIZE — reset sidebar on desktop */
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 991) closeSidebar();
+});
+
+/* LOAD — show correct page on refresh */
+document.addEventListener('DOMContentLoaded', () => {
+    const activeLink = document.querySelector('.nav-link.active');
+    if (activeLink) {
+        switchPage(activeLink.dataset.page);
+    } else {
+        switchPage('dashboard');
+        const def = document.querySelector('[data-page="dashboard"]');
+        if (def) def.classList.add('active');
+    }
+});
 </script>
  
 </body>

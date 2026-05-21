@@ -8,857 +8,429 @@
     <link rel="stylesheet" href="user.css">
 </head>
 <body>
- 
+
 <!-- MOBILE TOPBAR -->
 <header class="mobile-bar">
   <div class="mobile-bar-brand">
-    <a href="./index.html">
-      <img src="./src/logo.webp" alt="">
-    </a>
+    <a href="./index.html"><img src="./src/logo.webp" alt="Logo"></a>
   </div>
- 
   <div class="mobile-bar-right">
- 
     <button class="m-logout" onclick="logout()">
       <i class="fas fa-sign-out-alt"></i> Logout
     </button>
- 
     <button class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </button>
   </div>
 </header>
- 
+
 <!-- OVERLAY -->
 <div class="overlay" id="overlay"></div>
- 
+
 <div class="app-shell">
- 
+
   <!-- SIDEBAR -->
   <aside class="sidebar" id="sidebar">
- 
     <div class="sidebar-brand">
       <div class="logo">
-        <a href="./index.html">
-          <img src="./src/logo.webp" alt="">
-        </a>
-      </div>
-      <div class="sidebar-brand-text">
+        <a href="./index.html"><img src="./src/logo.webp" alt="Logo"></a>
       </div>
     </div>
- 
+
     <nav class="sidebar-nav">
- 
-    <a href="./404.html" class="nav-link active" data-page="dashboard">
-        <i class="fas fa-home"></i>
-        Dashboard
-    </a>
- 
-    <a href="./404.html" class="nav-link" data-page="analytics">
-        <i class="fas fa-chart-line"></i>
-        Analytics
-    </a>
- 
-    <a href="./404.html" class="nav-link" data-page="notifications">
-        <i class="fas fa-bell"></i>
-        Notifications
-    </a>
- 
-    <a href="./404.html" class="nav-link" data-page="settings">
-        <i class="fas fa-cog"></i>
-        Settings
-    </a>
- 
-    <a href="./404.html" class="nav-link" data-page="support">
-        <i class="fas fa-headset"></i>
-        Support
-    </a>
- 
-</nav>
- 
-   
- 
+      <a href="#" class="nav-link active" data-page="dashboard">
+        <i class="fas fa-home"></i> Dashboard
+      </a>
+      <a href="#" class="nav-link" data-page="analytics">
+        <i class="fas fa-chart-line"></i> Analytics
+      </a>
+      <a href="#" class="nav-link" data-page="notifications">
+        <i class="fas fa-bell"></i> Notifications
+      </a>
+      <a href="#" class="nav-link" data-page="settings">
+        <i class="fas fa-cog"></i> Settings
+      </a>
+      <a href="#" class="nav-link" data-page="support">
+        <i class="fas fa-headset"></i> Support
+      </a>
+    </nav>
   </aside>
- 
+
   <!-- MAIN CONTENT -->
   <div class="main-content">
- 
-    <!-- DESKTOP TOPBAR -->
-    <div class="topbar">
- 
-      <div class="topbar-left">
-        <a href="./index.html">
 
-            <div class="welcome-tag">
-              Home
-            </div>
-        </a>
- 
-        <h1 id="dashboardTitle">
-          User Dashboard
-        </h1>
-       
- 
-       
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div class="topbar-left">
+        <a href="./index.html"><div class="welcome-tag">Home</div></a>
+        <h1 id="dashboardTitle">User Dashboard</h1>
       </div>
-     
       <div class="topbar-right">
         <div class="email-badge">
-    <i class="fas fa-user-tag"></i>
-    <span id="">User</span>
-</div>
+          <i class="fas fa-user-tag"></i>
+          <span id="text">User</span>
+        </div>
         <div class="email-badge">
           <i class="fas fa-envelope"></i>
           <span id="topbarEmailBadge">—</span>
         </div>
- 
         <button class="topbar-logout" onclick="logout()">
-          <i class="fas fa-sign-out-alt"></i>
-          Logout
+          <i class="fas fa-sign-out-alt"></i> Logout
         </button>
- 
       </div>
- 
     </div>
- 
-    <!-- CONTENT -->
+
+    <!-- PAGE CONTENT AREA -->
     <div class="content-area">
- 
-    <!-- DASHBOARD PAGE -->
- 
- 
- 
-<!-- DASHBOARD PAGE -->
 
-<div class="page-content active-page" id="dashboard">
+      <!-- ✅ DASHBOARD PAGE -->
+      <div class="page-content active-page" id="dashboard">
+        <div class="dashboard-grid">
 
-    <div class="dashboard-grid">
-
-        <!-- MY ORDERS -->
-
-        <div class="dashboard-card">
-            <h3>
-                <i class="fas fa-shopping-bag"></i>
-                My Orders
-            </h3>
-
+          <div class="dashboard-card">
+            <h3><i class="fas fa-shopping-bag"></i> My Orders</h3>
             <div class="wallet-balance">
-                <span>12</span>
-                <small>Total Orders Placed</small>
+              <span>12</span>
+              <small>Total Orders Placed</small>
             </div>
-        </div>
+          </div>
 
-        <!-- TOTAL SPENDING -->
-
-        <div class="dashboard-card">
-            <h3>
-                <i class="fas fa-wallet"></i>
-                Total Spending
-            </h3>
-
+          <div class="dashboard-card">
+            <h3><i class="fas fa-wallet"></i> Total Spending</h3>
             <div class="wallet-balance">
-                <span>₹18,450</span>
-                <small>Total Shopping Amount</small>
+              <span>₹18,450</span>
+              <small>Total Shopping Amount</small>
             </div>
-        </div>
+          </div>
 
-        <!-- CUSTOMER REVIEWS -->
-
-        <div class="dashboard-card">
-            <h3>
-                <i class="fas fa-star"></i>
-                My Reviews
-            </h3>
-
+          <div class="dashboard-card">
+            <h3><i class="fas fa-star"></i> My Reviews</h3>
             <div class="review-item">
-                <div class="stars">★★★★★</div>
-                <p>Amazing Fashion Collection</p>
-                <small>Your Latest Review</small>
+              <div class="stars">★★★★★</div>
+              <p>Amazing Fashion Collection</p>
+              <small>Your Latest Review</small>
             </div>
-        </div>
+          </div>
 
-        <!-- RECENT PURCHASES -->
-
-        <div class="dashboard-card">
-
-            <h3>
-                <i class="fas fa-fire"></i>
-                Recent Purchases
-            </h3>
-
+          <div class="dashboard-card">
+            <h3><i class="fas fa-fire"></i> Recent Purchases</h3>
             <div class="notification-item">
-                <p>Men's Oversized Hoodie</p>
-                <small>Delivered Yesterday</small>
+              <p>Men's Oversized Hoodie</p>
+              <small>Delivered Yesterday</small>
             </div>
-
             <div class="notification-item">
-                <p>Women's Handbag</p>
-                <small>Out For Delivery</small>
+              <p>Women's Handbag</p>
+              <small>Out For Delivery</small>
             </div>
+          </div>
 
-        </div>
-
-        <!-- ACCOUNT PERFORMANCE -->
-
-        <div class="dashboard-card">
-
-            <h3>
-                <i class="fas fa-user-check"></i>
-                Account Status
-            </h3>
-
+          <div class="dashboard-card">
+            <h3><i class="fas fa-user-check"></i> Account Status</h3>
             <div class="notification-item">
-                <p>Membership Level</p>
-                <small>Premium User</small>
+              <p>Membership Level</p>
+              <small>Premium User</small>
             </div>
-
             <div class="notification-item">
-                <p>Loyalty Points</p>
-                <small>2,450 Points Available</small>
+              <p>Loyalty Points</p>
+              <small>2,450 Points Available</small>
             </div>
+          </div>
+
+          <div class="dashboard-card">
+            <h3><i class="fas fa-gift"></i> Offers & Discounts</h3>
+            <div class="notification-item">
+              <p>Weekend Fashion Sale</p>
+              <small>Flat 40% OFF Available</small>
+            </div>
+            <div class="notification-item">
+              <p>Free Shipping</p>
+              <small>On Orders Above ₹999</small>
+            </div>
+          </div>
 
         </div>
+      </div>
 
-        <!-- OFFERS -->
+      <!-- ✅ ANALYTICS PAGE -->
+      <div class="page-content" id="analytics">
+        <div class="dashboard-grid">
 
-        <div class="dashboard-card">
-
-            <h3>
-                <i class="fas fa-gift"></i>
-                Offers & Discounts
-            </h3>
-
-            <div class="notification-item">
-                <p>Weekend Fashion Sale</p>
-                <small>Flat 40% OFF Available</small>
-            </div>
-
-            <div class="notification-item">
-                <p>Free Shipping</p>
-                <small>On Orders Above ₹999</small>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-<!-- ANALYTICS PAGE -->
-<div class="page-content" id="analytics">
- 
-    <div class="dashboard-grid">
- 
-        <!-- MONTHLY SHOPPING -->
-
-        <div class="dashboard-card">
-            <h3>
-                <i class="fas fa-chart-line"></i>
-                Monthly Shopping
-            </h3>
- 
+          <div class="dashboard-card">
+            <h3><i class="fas fa-chart-line"></i> Monthly Shopping</h3>
             <div class="wallet-balance">
-                <span>₹24,850</span>
-                <small>Total Shopping This Month</small>
+              <span>₹24,850</span>
+              <small>Total Shopping This Month</small>
             </div>
+          </div>
+
+          <div class="dashboard-card">
+            <h3><i class="fas fa-shirt"></i> Favorite Products</h3>
+            <div class="notification-item">
+              <p>Men's Oversized T-Shirts</p>
+              <small>Recently Purchased</small>
+            </div>
+            <div class="notification-item">
+              <p>Women's Hoodies</p>
+              <small>Added To Wishlist</small>
+            </div>
+          </div>
+
+          <div class="dashboard-card">
+            <h3><i class="fas fa-user-check"></i> Account Activity</h3>
+            <div class="notification-item">
+              <p>Orders Completed</p>
+              <small>18 Successful Orders</small>
+            </div>
+            <div class="notification-item">
+              <p>Wishlist Items</p>
+              <small>12 Products Saved</small>
+            </div>
+          </div>
+
+          <div class="dashboard-card">
+            <h3><i class="fas fa-box-open"></i> Delivery Status</h3>
+            <div class="notification-item">
+              <p>Current Orders</p>
+              <small>2 Orders On The Way</small>
+            </div>
+            <div class="notification-item">
+              <p>Delivered Orders</p>
+              <small>16 Products Delivered</small>
+            </div>
+          </div>
+
+          <div class="dashboard-card">
+            <h3><i class="fas fa-medal"></i> Membership Rewards</h3>
+            <div class="notification-item">
+              <p>Premium Member</p>
+              <small>Unlocked This Month</small>
+            </div>
+            <div class="notification-item">
+              <p>Loyalty Points</p>
+              <small>2,450 Points Available</small>
+            </div>
+          </div>
+
         </div>
- 
-        <!-- FAVORITE PRODUCTS -->
+      </div>
 
-        <div class="dashboard-card">
-            <h3>
-                <i class="fas fa-shirt"></i>
-                Favorite Products
-            </h3>
- 
+      <!-- ✅ NOTIFICATIONS PAGE -->
+      <div class="page-content" id="notifications">
+        <div class="dashboard-grid">
+
+          <div class="dashboard-card">
+            <h3><i class="fas fa-bell"></i> Order Notifications</h3>
             <div class="notification-item">
-                <p>Men's Oversized T-Shirts</p>
-                <small>Recently Purchased</small>
+              <p>Your order has been shipped</p>
+              <small>2 mins ago</small>
             </div>
- 
             <div class="notification-item">
-                <p>Women's Hoodies</p>
-                <small>Added To Wishlist</small>
+              <p>Delivery address updated successfully</p>
+              <small>15 mins ago</small>
             </div>
+            <div class="notification-item">
+              <p>Festival sale is now live</p>
+              <small>Today</small>
+            </div>
+          </div>
+
+          <div class="dashboard-card">
+            <h3><i class="fas fa-comments"></i> Messages</h3>
+            <div class="notification-item">
+              <p>Fashion Store</p>
+              <small>Your wishlist item is back in stock.</small>
+            </div>
+            <div class="notification-item">
+              <p>Support Team</p>
+              <small>Your account settings updated successfully.</small>
+            </div>
+          </div>
+
+          <div class="dashboard-card">
+            <h3><i class="fas fa-tags"></i> Product Updates</h3>
+            <div class="notification-item">
+              <p>New summer collection launched</p>
+              <small>Trending Fashion Products</small>
+            </div>
+            <div class="notification-item">
+              <p>Exclusive discounts available</p>
+              <small>Up to 50% OFF Today</small>
+            </div>
+          </div>
+
         </div>
- 
-        <!-- ACCOUNT ACTIVITY -->
+      </div>
 
-        <div class="dashboard-card">
-            <h3>
-                <i class="fas fa-user-check"></i>
-                Account Activity
-            </h3>
- 
-            <div class="notification-item">
-                <p>Orders Completed</p>
-                <small>18 Successful Orders</small>
-            </div>
- 
-            <div class="notification-item">
-                <p>Wishlist Items</p>
-                <small>12 Products Saved</small>
-            </div>
-        </div>
+      <!-- ✅ SETTINGS PAGE -->
+      <div class="page-content" id="settings">
+        <div class="dashboard-grid">
 
-        <!-- DELIVERY STATUS -->
-
-        <div class="dashboard-card">
- 
-            <h3>
-                <i class="fas fa-box-open"></i>
-                Delivery Status
-            </h3>
- 
-            <div class="notification-item">
-                <p>Current Orders</p>
-                <small>2 Orders On The Way</small>
-            </div>
- 
-            <div class="notification-item">
-                <p>Delivered Orders</p>
-                <small>16 Products Delivered</small>
-            </div>
- 
-        </div>
- 
-        <!-- MEMBERSHIP -->
-
-        <div class="dashboard-card">
- 
-            <h3>
-                <i class="fas fa-medal"></i>
-                Membership Rewards
-            </h3>
- 
-            <div class="notification-item">
-                <p>Premium Member</p>
-                <small>Unlocked This Month</small>
-            </div>
- 
-            <div class="notification-item">
-                <p>Loyalty Points</p>
-                <small>2,450 Points Available</small>
-            </div>
- 
-        </div>
- 
-    </div>
- 
-</div>
- 
-<!-- NOTIFICATIONS PAGE -->
- <div class="page-content" id="notifications">
- 
-    <div class="dashboard-grid">
- 
-        <!-- ORDER NOTIFICATIONS -->
-
-        <div class="dashboard-card">
- 
-            <h3>
-                <i class="fas fa-bell"></i>
-                Order Notifications
-            </h3>
- 
-            <div class="notification-item">
-                <p>Your order has been shipped</p>
-                <small>2 mins ago</small>
-            </div>
- 
-            <div class="notification-item">
-                <p>Delivery address updated successfully</p>
-                <small>15 mins ago</small>
-            </div>
- 
-            <div class="notification-item">
-                <p>Festival sale is now live</p>
-                <small>Today</small>
-            </div>
- 
-        </div>
- 
-        <!-- STORE MESSAGES -->
-
-        <div class="dashboard-card">
- 
-            <h3>
-                <i class="fas fa-comments"></i>
-                Messages
-            </h3>
- 
-            <div class="notification-item">
-                <p>Fashion Store</p>
-                <small>Your wishlist item is back in stock.</small>
-            </div>
- 
-            <div class="notification-item">
-                <p>Support Team</p>
-                <small>Your account settings updated successfully.</small>
-            </div>
- 
-        </div>
-
-        <!-- PRODUCT UPDATES -->
-
-        <div class="dashboard-card">
- 
-            <h3>
-                <i class="fas fa-tags"></i>
-                Product Updates
-            </h3>
- 
-            <div class="notification-item">
-                <p>New summer collection launched</p>
-                <small>Trending Fashion Products</small>
-            </div>
- 
-            <div class="notification-item">
-                <p>Exclusive discounts available</p>
-                <small>Up to 50% OFF Today</small>
-            </div>
- 
-        </div>
- 
-    </div>
- 
-</div>
-
- 
-<!-- SETTINGS PAGE -->
- 
-<div class="page-content" id="settings">
- 
-    <div class="dashboard-grid">
- 
-        <!-- ACCOUNT SETTINGS -->
-
-        <div class="dashboard-card">
- 
-            <h3>
-                <i class="fas fa-user-cog"></i>
-                Account Settings
-            </h3>
- 
+          <div class="dashboard-card">
+            <h3><i class="fas fa-user-cog"></i> Account Settings</h3>
             <div class="support-links">
-                <a href="./404.html">Edit Profile</a>
-                <a href="./404.html">Personal Information</a>
-                <a href="./404.html">Saved Addresses</a>
-                <a href="./404.html">Change Password</a>
+              <a href="#">Edit Profile</a>
+              <a href="#">Personal Information</a>
+              <a href="#">Saved Addresses</a>
+              <a href="#">Change Password</a>
             </div>
- 
-        </div>
- 
-        <!-- PAYMENT SETTINGS -->
+          </div>
 
-        <div class="dashboard-card">
- 
-            <h3>
-                <i class="fas fa-wallet"></i>
-                Payment Settings
-            </h3>
- 
+          <div class="dashboard-card">
+            <h3><i class="fas fa-wallet"></i> Payment Settings</h3>
             <div class="support-links">
-                <a href="./404.html">Saved Cards</a>
-                <a href="./404.html">UPI & Wallets</a>
-                <a href="./404.html">Payment History</a>
+              <a href="#">Saved Cards</a>
+              <a href="#">UPI & Wallets</a>
+              <a href="#">Payment History</a>
             </div>
- 
-        </div>
+          </div>
 
-        <!-- SHOPPING PREFERENCES -->
-
-        <div class="dashboard-card">
- 
-            <h3>
-                <i class="fas fa-sliders-h"></i>
-                Shopping Preferences
-            </h3>
- 
+          <div class="dashboard-card">
+            <h3><i class="fas fa-sliders-h"></i> Shopping Preferences</h3>
             <div class="support-links">
-                <a href="./404.html">Wishlist Settings</a>
-                <a href="./404.html">Order Notifications</a>
-                <a href="./404.html">Theme Preferences</a>
+              <a href="#">Wishlist Settings</a>
+              <a href="#">Order Notifications</a>
+              <a href="#">Theme Preferences</a>
             </div>
- 
-        </div>  
- 
-    </div>
- 
-</div>
- 
-<!-- SUPPORT PAGE -->
- 
-<div class="page-content" id="support">
- 
-    <div class="dashboard-grid">
- 
-        <!-- CUSTOMER SUPPORT -->
+          </div>
 
-        <div class="dashboard-card">
- 
-            <h3>
-                <i class="fas fa-headset"></i>
-                Customer Support
-            </h3>
- 
-            <div class="notification-item">
-                <p>Customer Helpline</p>
-                <small>+91 9876543210</small>
-            </div>
- 
-            <div class="notification-item">
-                <p>Email Support</p>
-                <small>support@Stackly.com</small>
-            </div>
-
-            <a href="./404.html">
-                <button class="btn-support">
-                    Contact Support
-                </button>
-            </a>
- 
         </div>
- 
-        <!-- HELP CENTER -->
+      </div>
 
-        <div class="dashboard-card">
- 
-            <h3>
-                <i class="fas fa-question-circle"></i>
-                Help Center
-            </h3>
- 
-            <div class="notification-item">
-                <p>How to track my orders?</p>
-            </div>
- 
-            <div class="notification-item">
-                <p>How to apply discount coupons?</p>
-            </div>
- 
-            <div class="notification-item">
-                <p>How to return products?</p>
-            </div>
- 
-        </div>
-
-        <!-- USER RESOURCES -->
-
-        <div class="dashboard-card">
- 
-            <h3>
-                <i class="fas fa-store"></i>
-                Shopping Resources
-            </h3>
- 
-            <div class="notification-item">
-                <p>Latest Fashion Collections</p>
-            </div>
- 
-            <div class="notification-item">
-                <p>Shopping & Styling Tips</p>
-            </div>
- 
-            <div class="notification-item">
-                <p>Size Guide & Help</p>
-            </div>
- 
-        </div>
- 
-    </div>
- 
-</div>
-    <!-- ANALYTICS PAGE -->
- 
-    <div class="page-content" id="analytics">
- 
+      <!-- ✅ SUPPORT PAGE -->
+      <div class="page-content" id="support">
         <div class="dashboard-grid">
- 
-            <div class="dashboard-card">
-                <h3>
-                    <i class="fas fa-dollar-sign"></i>
-                    Revenue Analytics
-                </h3>
- 
-                <div class="wallet-balance">
-                    <span>₹12K</span>
-                    <small>Monthly Revenue</small>
-                </div>
+
+          <div class="dashboard-card">
+            <h3><i class="fas fa-headset"></i> Customer Support</h3>
+            <div class="notification-item">
+              <p>Customer Helpline</p>
+              <small>+91 9876543210</small>
             </div>
- 
-            <div class="dashboard-card">
-                <h3>
-                    <i class="fas fa-shopping-cart"></i>
-                    Orders Analytics
-                </h3>
- 
-                <div class="notification-item">
-                    <p>Total Orders</p>
-                    <small>1,245 Orders Completed</small>
-                </div>
- 
-                <div class="notification-item">
-                    <p>Pending Orders</p>
-                    <small>25 Active Orders</small>
-                </div>
+            <div class="notification-item">
+              <p>Email Support</p>
+              <small>support@stackly.com</small>
             </div>
- 
-            <div class="dashboard-card">
-                <h3>
-                    <i class="fas fa-chart-pie"></i>
-                    Performance
-                </h3>
- 
-                <div class="notification-item">
-                    <p>Customer Satisfaction</p>
-                    <small>96% Positive Reviews</small>
-                </div>
- 
-                <div class="notification-item">
-                    <p>Delivery Speed</p>
-                    <small>Average 24 mins</small>
-                </div>
-            </div>
- 
+            <button class="btn-support">Contact Support</button>
+          </div>
+
+          <div class="dashboard-card">
+            <h3><i class="fas fa-question-circle"></i> Help Center</h3>
+            <div class="notification-item"><p>How to track my orders?</p></div>
+            <div class="notification-item"><p>How to apply discount coupons?</p></div>
+            <div class="notification-item"><p>How to return products?</p></div>
+          </div>
+
+          <div class="dashboard-card">
+            <h3><i class="fas fa-store"></i> Shopping Resources</h3>
+            <div class="notification-item"><p>Latest Fashion Collections</p></div>
+            <div class="notification-item"><p>Shopping & Styling Tips</p></div>
+            <div class="notification-item"><p>Size Guide & Help</p></div>
+          </div>
+
         </div>
- 
-    </div>
- 
-    <!-- NOTIFICATIONS PAGE -->
- 
-    <div class="page-content" id="notifications">
- 
-        <div class="dashboard-grid">
- 
-            <div class="dashboard-card">
- 
-                <h3>
-                    <i class="fas fa-bell"></i>
-                    Notifications
-                </h3>
- 
-                <div class="notification-item">
-                    <p>New delivery assigned</p>
-                    <small>5 mins ago</small>
-                </div>
- 
-                <div class="notification-item">
-                    <p>Payment received successfully</p>
-                    <small>30 mins ago</small>
-                </div>
- 
-                <div class="notification-item">
-                    <p>Customer rated your service</p>
-                    <small>1 hour ago</small>
-                </div>
- 
-            </div>
- 
-            <div class="dashboard-card">
- 
-                <h3>
-                    <i class="fas fa-envelope"></i>
-                    Messages
-                </h3>
- 
-                <div class="notification-item">
-                    <p>Support Team</p>
-                    <small>Your ticket has been updated.</small>
-                </div>
- 
-                <div class="notification-item">
-                    <p>Admin Team</p>
-                    <small>New dashboard features added.</small>
-                </div>
- 
-            </div>
- 
-        </div>
- 
-    </div>
- 
-    <!-- SETTINGS PAGE -->
- 
-    <div class="page-content" id="settings">
- 
-        <div class="dashboard-grid">
- 
-            <div class="dashboard-card">
- 
-                <h3>
-                    <i class="fas fa-user-cog"></i>
-                    Account Settings
-                </h3>
- 
-                <div class="support-links">
-                    <a href="#">Edit Profile</a>
-                    <a href="#">Change Password</a>
-                    <a href="#">Manage Address</a>
-                </div>
- 
-            </div>
- 
-            <div class="dashboard-card">
- 
-                <h3>
-                    <i class="fas fa-shield-alt"></i>
-                    Privacy Settings
-                </h3>
- 
-                <div class="support-links">
-                    <a href="#">Two-Factor Authentication</a>
-                    <a href="#">Manage Devices</a>
-                    <a href="#">Login History</a>
-                </div>
- 
-            </div>
- 
-        </div>
- 
-    </div>
- 
-    <!-- SUPPORT PAGE -->
- 
-    <div class="page-content" id="support">
- 
-        <div class="dashboard-grid">
- 
-            <div class="dashboard-card">
- 
-                <h3>
-                    <i class="fas fa-headset"></i>
-                    Customer Support
-                </h3>
- 
-                <div class="notification-item">
-                    <p>Email Support</p>
-                    <small>support@stackly.com</small>
-                </div>
- 
-                <div class="notification-item">
-                    <p>Phone Support</p>
-                    <small>+91 9876543210</small>
-                </div>
- 
-                <button class="btn-support">
-                    Contact Support
-                </button>
- 
-            </div>
- 
-            <div class="dashboard-card">
- 
-                <h3>
-                    <i class="fas fa-question-circle"></i>
-                    FAQ
-                </h3>
- 
-                <div class="notification-item">
-                    <p>How to track orders?</p>
-                </div>
- 
-                <div class="notification-item">
-                    <p>How to change password?</p>
-                </div>
- 
-                <div class="notification-item">
-                    <p>How to contact delivery partner?</p>
-                </div>
- 
-            </div>
- 
-        </div>
- 
-    </div>
- 
-</div>
- 
-  </div>
- 
-</div>
- 
+      </div>
+
+    </div><!-- end .content-area -->
+  </div><!-- end .main-content -->
+</div><!-- end .app-shell -->
+
+<!-- ✅ Link external JS file -->
 <script>
- 
-const email = sessionStorage.getItem('userEmail') || 'guest@stackly.app';
- 
-document.getElementById('topbarEmailBadge').textContent = email;
- 
-const badge = document.getElementById('topbarEmailBadges');
- 
-if(badge){
-    badge.textContent = email;
+    
+/* AUTH GUARD — redirect if not logged in */
+const email = localStorage.getItem('loggedInUser');
+
+if (!email) {
+    window.location.href = 'index.html';
 }
- 
+
+/* DISPLAY EMAIL */
+const topbarEmailBadge = document.getElementById('topbarEmailBadge');
+if (topbarEmailBadge) topbarEmailBadge.textContent = email;
+
+/* SIDEBAR */
 const hamburger = document.getElementById('hamburger');
-const sidebar = document.getElementById('sidebar');
-const overlay = document.getElementById('overlay');
- 
+const sidebar   = document.getElementById('sidebar');
+const overlay   = document.getElementById('overlay');
+
 function openSidebar() {
-  sidebar.classList.add('open');
-  overlay.classList.add('active');
-  hamburger.classList.add('open');
-  document.body.style.overflow = 'hidden';
+    sidebar.classList.add('open');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
 }
- 
+
 function closeSidebar() {
-  sidebar.classList.remove('open');
-  overlay.classList.remove('active');
-  hamburger.classList.remove('open');
-  document.body.style.overflow = '';
+    sidebar.classList.remove('open');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
 }
- 
+
 hamburger.addEventListener('click', () => {
- 
-  if(sidebar.classList.contains('open')) {
-    closeSidebar();
-  } else {
-    openSidebar();
-  }
- 
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
 });
- 
+
 overlay.addEventListener('click', closeSidebar);
- 
+
+/* LOGOUT */
 function logout() {
-  sessionStorage.removeItem('userEmail');
-  window.location.href = 'index.html';
+    localStorage.removeItem('loggedInUser');
+    localStorage.removeItem('userRole');
+    window.location.href = 'index.html';
 }
- 
- 
- 
+
+/* PAGE TITLES */
+const pageTitles = {
+    dashboard    : 'User Dashboard',
+    analytics    : 'Analytics',
+    notifications: 'Notifications',
+    settings     : 'Settings',
+    support      : 'Support'
+};
+
+/* NAV SWITCHING */
 const navLinks = document.querySelectorAll('.nav-link');
-const pages = document.querySelectorAll('.page-content');
- 
+const pages    = document.querySelectorAll('.page-content');
+
+function switchPage(targetId) {
+    pages.forEach(p => p.classList.remove('active-page'));
+    const target = document.getElementById(targetId);
+    if (target) target.classList.add('active-page');
+
+    const title = document.getElementById('dashboardTitle');
+    if (title && pageTitles[targetId]) title.textContent = pageTitles[targetId];
+}
+
 navLinks.forEach(link => {
- 
-    link.addEventListener('click', function(e){
- 
+    link.addEventListener('click', function(e) {
         e.preventDefault();
- 
-        navLinks.forEach(item => {
-            item.classList.remove('active');
-        });
- 
+
+        navLinks.forEach(l => l.classList.remove('active'));
         this.classList.add('active');
- 
-        const target = this.dataset.page;
- 
-        pages.forEach(page => {
-            page.classList.remove('active-page');
-        });
- 
-        document.getElementById(target)
-        .classList.add('active-page');
- 
+
+        switchPage(this.dataset.page);
+
+        /* Auto-close sidebar on mobile */
+        if (window.innerWidth <= 991) closeSidebar();
     });
- 
 });
-/* ROLE */
- 
- 
+
+/* RESIZE — reset sidebar on desktop */
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 991) closeSidebar();
+});
+
+/* LOAD — show correct page on refresh */
+document.addEventListener('DOMContentLoaded', () => {
+    const activeLink = document.querySelector('.nav-link.active');
+    if (activeLink) {
+        switchPage(activeLink.dataset.page);
+    } else {
+        switchPage('dashboard');
+        const def = document.querySelector('[data-page="dashboard"]');
+        if (def) def.classList.add('active');
+    }
+});
 </script>
- 
+
 </body>
 </html>
