@@ -789,7 +789,7 @@ header {
     overflow-x: hidden;
     background:
         linear-gradient(rgba(15, 28, 46, 0.08), rgba(15, 28, 46, 0.08)),
-        url("./src/home.webp");
+        url("src/main-banner-1-compressed.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
